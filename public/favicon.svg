@@ -1,11 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Leon Azdajic monogram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Leon Azdajic monogram — LA">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#00D7D2"/>
       <stop offset="1" stop-color="#00A8A4"/>
     </linearGradient>
   </defs>
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0a0a0f" stroke="url(#g)" stroke-width="2"/>
-  <path d="M20 18 V46 H34" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M38 46 L46 18 L54 46" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dark rounded tile with petrol border, matching the header brand mark -->
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0a0a0f" stroke="url(#g)" stroke-width="2"/>
+  <!-- L -->
+  <path d="M18 16 V48 H31" fill="none" stroke="url(#g)" stroke-width="4.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- A (with crossbar so it reads clearly as A) -->
+  <path d="M37 48 L45 16 L53 48 M40 37 H50" fill="none" stroke="url(#g)" stroke-width="4.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
