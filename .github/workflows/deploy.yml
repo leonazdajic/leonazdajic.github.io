@@ -31,6 +31,10 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        # Project page is served from /<repo>/, so assets must be prefixed.
+        # For a user page (repo named <username>.github.io) set this to "/".
+        env:
+          BASE_PATH: /leon_azdajic/
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
