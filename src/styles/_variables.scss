@@ -1,0 +1,50 @@
+// ============================================================
+//  Design tokens — Mercedes-inspired dark / neon-petrol theme
+// ============================================================
+
+// --- Colors ---
+$bg-primary: #0a0a0f; // deep anthracite / near-black
+$bg-secondary: #101018; // raised surfaces (cards)
+$bg-elevated: #15151f; // hover / elevated surfaces
+
+$accent: #00d7d2; // neon petrol-cyan (Mercedes-style)
+$accent-soft: #4fe6e2;
+$accent-deep: #00a8a4;
+$accent-glow: rgba(0, 215, 210, 0.16);
+$accent-line: rgba(0, 215, 210, 0.4);
+
+$text-primary: #f1f2f5;
+$text-secondary: #9aa0ad;
+$text-muted: #5f6571;
+
+$border: rgba(255, 255, 255, 0.07);
+$border-strong: rgba(255, 255, 255, 0.13);
+
+// --- Typography ---
+// Self-hosted via Fontsource (imported in main.ts). "… Variable" is the family
+// name the Fontsource variable packages register; system fonts as fallback.
+$font-display: "Space Grotesk Variable", system-ui, sans-serif;
+$font-body: "Inter Variable", system-ui, -apple-system, sans-serif;
+
+// --- Layout ---
+$max-width: 1080px;
+$nav-height: 72px;
+
+// --- Motion ---
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+$transition: 0.4s $ease;
+
+// --- Breakpoints ---
+$bp-mobile: 600px;
+$bp-tablet: 900px;
+
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}

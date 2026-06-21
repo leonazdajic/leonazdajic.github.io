@@ -1,0 +1,116 @@
+// ============================================================
+//  Hero
+// ============================================================
+
+@use "variables" as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $nav-height clamp(1.25rem, 5vw, 2.5rem) 4rem;
+
+  &__inner {
+    max-width: 760px;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: $font-display;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $text-secondary;
+    margin-bottom: 1.6rem;
+  }
+
+  &__pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $accent;
+    box-shadow: 0 0 0 0 $accent;
+    animation: pulse 2.4s infinite;
+  }
+
+  &__name {
+    font-size: clamp(2.8rem, 11vw, 6rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.98;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(180deg, #ffffff 0%, #b8bcc6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__role {
+    font-family: $font-display;
+    font-size: clamp(1.15rem, 3.2vw, 1.6rem);
+    font-weight: 500;
+    color: $text-primary;
+    margin-bottom: 1.8rem;
+
+    &-sub {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: $accent;
+      letter-spacing: 0.04em;
+      margin-top: 0.4rem;
+    }
+  }
+
+  &__tagline {
+    font-size: clamp(1rem, 2.3vw, 1.18rem);
+    color: $text-secondary;
+    max-width: 620px;
+    margin-bottom: 2.6rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 1px solid $border-strong;
+    border-radius: 999px;
+    display: grid;
+    place-items: start center;
+    padding-top: 7px;
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: $accent-line;
+    }
+
+    &-line {
+      width: 2px;
+      height: 8px;
+      border-radius: 2px;
+      background: $accent;
+      animation: scroll-hint 1.8s $ease infinite;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

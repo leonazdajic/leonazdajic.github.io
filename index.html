@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Leon Azdajic — Business Information Systems (B.Sc., IMBIT) · Daimler Truck AG</title>
+    <meta
+      name="description"
+      content="Online CV of Leon Azdajic — dual Business Information Systems student (B.Sc., IMBIT) at Daimler Truck AG, working at the intersection of business and technology: data analytics, process automation and self-built software tools."
+    />
+    <meta name="author" content="Leon Azdajic" />
+    <meta name="theme-color" content="#0a0a0f" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Leon Azdajic — Business Information Systems · Daimler Truck AG" />
+    <meta
+      property="og:description"
+      content="Dual B.Sc. student at Daimler Truck AG. Data analytics, process automation and self-built software tools at the intersection of business and technology."
+    />
+
+    <!-- Fonts are self-hosted via Fontsource (see src/main.ts) — no external
+         requests, GDPR-friendly. -->
+  </head>
+  <body>
+    <!-- Subtle animated tech background (grid + glow), drawn on canvas -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="bg-vignette" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================= NAV ============================= -->
+    <header class="nav" id="nav">
+      <a href="#hero" class="nav__brand" aria-label="Home — Leon Azdajic">
+        <span class="nav__brand-mark">LA</span>
+        <span class="nav__brand-name">Leon Azdajic</span>
+      </a>
+      <nav class="nav__links" aria-label="Section navigation">
+        <a href="#profile" class="nav__link">Profile</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#awards" class="nav__link">Awards</a>
+        <a href="#beyond" class="nav__link">Beyond</a>
+        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ============================= HERO ============================= -->
+      <section class="hero" id="hero">
+        <div class="hero__inner">
+          <p class="hero__eyebrow reveal">
+            <span class="hero__pulse" aria-hidden="true"></span>
+            Daimler Truck AG · Stuttgart, Germany
+          </p>
+          <h1 class="hero__name reveal">Leon Azdajic</h1>
+          <p class="hero__role reveal">
+            Business Information Systems Student
+            <span class="hero__role-sub">B.Sc. · IMBIT · DHBW Stuttgart</span>
+          </p>
+          <p class="hero__tagline reveal">
+            Working at the intersection of <span class="accent">business</span> and
+            <span class="accent">technology</span> — turning real-world business needs into
+            practical digital solutions through data analytics, process automation and
+            self-built software tools.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#experience" class="btn btn--primary">View experience</a>
+            <a href="mailto:azdajicleon@gmail.com" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+        <a href="#profile" class="hero__scroll" aria-label="Scroll to content">
+          <span class="hero__scroll-line"></span>
+        </a>
+      </section>
+
+      <!-- ============================= PROFILE ============================= -->
+      <section class="section" id="profile" aria-labelledby="profile-title">
+        <div class="section__head reveal">
+          <span class="section__index">01</span>
+          <h2 class="section__title" id="profile-title">Profile</h2>
+        </div>
+        <p class="profile__text reveal">
+          Dual student (B.Sc.) at Daimler Truck AG, studying International Management for
+          Business and Information Technology (IMBIT) at DHBW Stuttgart. I work at the
+          intersection of business and technology — translating real-world business needs into
+          practical digital solutions through data analytics, process automation and self-built
+          software tools. Comfortable owning a problem end to end: understanding the business
+          side, designing the technical solution and delivering something stakeholders actually
+          use.
+        </p>
+      </section>
+
+      <!-- ============================= EXPERIENCE ============================= -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section__head reveal">
+          <span class="section__index">02</span>
+          <h2 class="section__title" id="experience-title">Experience</h2>
+        </div>
+
+        <!-- Parent company -->
+        <article class="company reveal">
+          <header class="company__head">
+            <div>
+              <h3 class="company__name">Daimler Truck AG</h3>
+              <p class="company__meta">
+                Corporate Student (B.Sc.) · Leinfelden-Echterdingen, Germany
+              </p>
+            </div>
+            <span class="company__period">Oct 2024 — Present</span>
+          </header>
+          <p class="company__desc">
+            A dual study program combining academic studies in Business Information Systems
+            (IMBIT) with rotating practical assignments across departments at Daimler Truck AG
+            and Mercedes-Benz Trucks.
+          </p>
+
+          <!-- Nested stations -->
+          <ol class="stations">
+            <!-- Station 1 -->
+            <li class="station reveal">
+              <div class="station__node" aria-hidden="true"></div>
+              <div class="station__body">
+                <div class="station__head">
+                  <h4 class="station__role">
+                    Digital Solutions, Mercedes-Benz Trucks
+                    <span class="station__team">Process Automation &amp; Master Data</span>
+                  </h4>
+                  <span class="station__period">May 2026 — Present</span>
+                </div>
+                <ul class="station__points">
+                  <li>
+                    Designed and built the <strong>ApiCon Masterdata Comparison Tool</strong>
+                    (Python / Flask / SQLite) — a web application that automatically validates
+                    Excel master data against the live product API across up to 25 European
+                    markets, detecting and classifying data deviations by severity and
+                    generating structured reports.
+                  </li>
+                  <li>
+                    Replaced a fully manual validation process (~1 hour per market, 2–3 weeks
+                    per full rollout), enabling the offshore data team (DTICI, India) to
+                    self-validate master data independently and removing a single-person
+                    bottleneck.
+                  </li>
+                  <li>
+                    Extracted and analyzed <strong>Userlane Analytics API</strong> data to
+                    evaluate digital customer experience feedback, building <strong>Power BI</strong>
+                    dashboards that make adoption and usage insights accessible to business
+                    stakeholders.
+                  </li>
+                  <li>
+                    Developed as a Design Science Research project (DHBW Projektarbeit),
+                    including a scientifically grounded data quality scoring framework.
+                  </li>
+                </ul>
+                <ul class="tags tags--inline" aria-label="Skills used">
+                  <li>Python</li>
+                  <li>Power BI</li>
+                  <li>REST APIs</li>
+                  <li>Process Automation</li>
+                  <li>Data Analysis</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Station 2 -->
+            <li class="station reveal">
+              <div class="station__node" aria-hidden="true"></div>
+              <div class="station__body">
+                <div class="station__head">
+                  <h4 class="station__role">
+                    Market Research &amp; Segment Strategy
+                    <span class="station__team">Mercedes-Benz Trucks</span>
+                  </h4>
+                  <span class="station__period">Jun 2025 — Aug 2025</span>
+                </div>
+                <ul class="station__points">
+                  <li>
+                    Analyzed ~19,800 used-truck listings (mobile.de) to identify market and
+                    segment patterns for Mercedes-Benz Trucks.
+                  </li>
+                  <li>
+                    Cleaned and standardized raw portal data using <strong>SQL</strong>,
+                    leveraging generative AI to support query generation and data
+                    transformation.
+                  </li>
+                  <li>
+                    Developed a <strong>Power BI</strong> prototype and configured an AI-based
+                    analytics agent (LibreChat), enabling natural-language, ad hoc market
+                    analysis for non-technical stakeholders.
+                  </li>
+                </ul>
+                <ul class="tags tags--inline" aria-label="Skills used">
+                  <li>SQL</li>
+                  <li>Power BI</li>
+                  <li>Data Analysis</li>
+                  <li>Generative AI</li>
+                  <li>Market Research</li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Station 3 -->
+            <li class="station reveal">
+              <div class="station__node" aria-hidden="true"></div>
+              <div class="station__body">
+                <div class="station__head">
+                  <h4 class="station__role">
+                    IT Infrastructure
+                    <span class="station__team">Project Management</span>
+                  </h4>
+                  <span class="station__period">Jan 2025 — Mar 2025</span>
+                </div>
+                <ul class="station__points">
+                  <li>
+                    Supported the project management team during the large-scale IT
+                    infrastructure separation (carve-out) of Daimler Truck and Mercedes-Benz,
+                    covering cloud, server and core IT systems.
+                  </li>
+                  <li>
+                    Assisted in tracking project milestones and preparing structured weekly
+                    steering updates.
+                  </li>
+                  <li>
+                    Consolidated provider meeting reports and supported project documentation
+                    using Office 365 and Excel, gaining hands-on insight into how complex IT
+                    transformation programs are coordinated at enterprise scale.
+                  </li>
+                </ul>
+                <ul class="tags tags--inline" aria-label="Skills used">
+                  <li>Project Management</li>
+                  <li>IT Infrastructure</li>
+                  <li>Stakeholder Coordination</li>
+                  <li>Microsoft Office 365</li>
+                  <li>Microsoft Excel</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </article>
+      </section>
+
+      <!-- ============================= EDUCATION ============================= -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title" id="education-title">Education</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__head">
+              <h3 class="card__title">Duale Hochschule Baden-Württemberg (DHBW) Stuttgart</h3>
+              <span class="card__period">Oct 2024 — Oct 2027</span>
+            </div>
+            <p class="card__subtitle">
+              B.Sc. in Business Information Systems — IMBIT (International Management for Business
+              and Information Technology)
+            </p>
+            <p class="card__location">Stuttgart, Germany</p>
+            <ul class="card__points">
+              <li>
+                <strong>Relevant coursework:</strong> Programming (Java, Python); Databases
+                (SQL); Distributed Systems; Software Lifecycle Management; Business
+                Administration; Accounting &amp; Finance; Mathematics
+              </li>
+              <li>
+                <strong>Selected project:</strong> Data-Driven Market Analytics Prototype (SQL,
+                Power BI, Generative AI) — Mercedes-Benz Trucks
+              </li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__head">
+              <h3 class="card__title">Mahidol University International College (MUIC)</h3>
+              <span class="card__period">Jan 2026 — Apr 2026</span>
+            </div>
+            <p class="card__subtitle">Exchange Semester in Business &amp; Technology</p>
+            <p class="card__location">Bangkok, Thailand</p>
+            <ul class="card__points">
+              <li>
+                Relevant coursework: Interaction Design; International Business Management;
+                International Financial Markets; Investment &amp; Portfolio Management
+              </li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__head">
+              <h3 class="card__title">Geschwister-Scholl-Gymnasium</h3>
+              <span class="card__period">Sep 2016 — Jul 2024</span>
+            </div>
+            <p class="card__subtitle">
+              German Abitur (General University Entrance Qualification)
+            </p>
+            <p class="card__location">Stuttgart, Germany</p>
+            <ul class="card__points">
+              <li>
+                <strong>Honors:</strong> State Sports Award, Ministry of Education, Youth and
+                Sports Baden-Württemberg (2024) — awarded to graduates achieving the maximum
+                score in both the theoretical and practical sports examination (one of 133
+                recipients statewide).
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================= SKILLS ============================= -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section__head reveal">
+          <span class="section__index">04</span>
+          <h2 class="section__title" id="skills-title">Skills</h2>
+        </div>
+
+        <div class="skills">
+          <div class="skills__group reveal">
+            <h3 class="skills__label">Technical</h3>
+            <ul class="tags" aria-label="Technical skills">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Power BI</li>
+              <li>Flask</li>
+              <li>REST APIs</li>
+              <li>SQLite</li>
+              <li>Microsoft Excel (advanced — PivotTables, Power Query)</li>
+              <li>Process Automation</li>
+              <li>Master Data Management</li>
+              <li>Data Analysis &amp; Visualization</li>
+              <li>Generative AI (LLM-supported analytics)</li>
+              <li>Java (basic)</li>
+              <li>Microsoft Office (Word, PowerPoint)</li>
+            </ul>
+          </div>
+
+          <div class="skills__group reveal">
+            <h3 class="skills__label">Languages</h3>
+            <ul class="lang-list" aria-label="Languages">
+              <li>
+                <span class="lang-list__name">German</span>
+                <span class="lang-list__level">Native</span>
+              </li>
+              <li>
+                <span class="lang-list__name">Croatian / Serbian</span>
+                <span class="lang-list__level">Native</span>
+              </li>
+              <li>
+                <span class="lang-list__name">English</span>
+                <span class="lang-list__level">Fluent · C1</span>
+              </li>
+              <li>
+                <span class="lang-list__name">French</span>
+                <span class="lang-list__level">Basic</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= AWARDS ============================= -->
+      <section class="section" id="awards" aria-labelledby="awards-title">
+        <div class="section__head reveal">
+          <span class="section__index">05</span>
+          <h2 class="section__title" id="awards-title">Certifications &amp; Awards</h2>
+        </div>
+
+        <div class="cards cards--two">
+          <article class="card card--award reveal">
+            <h3 class="card__title">Cambridge Certificate in Advanced English (C1)</h3>
+            <span class="card__period">Jul 2023</span>
+          </article>
+          <article class="card card--award reveal">
+            <h3 class="card__title">State Sports Award (Landessportpreis)</h3>
+            <p class="card__subtitle">
+              Ministry of Education, Youth and Sports Baden-Württemberg
+            </p>
+            <span class="card__period">2024</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================= BEYOND WORK ============================= -->
+      <section class="section" id="beyond" aria-labelledby="beyond-title">
+        <div class="section__head reveal">
+          <span class="section__index">06</span>
+          <h2 class="section__title" id="beyond-title">Beyond Work</h2>
+        </div>
+
+        <div class="cards cards--two">
+          <article class="card reveal">
+            <h3 class="card__title">Competitive Basketball</h3>
+            <ul class="card__points">
+              <li>U19 German National Basketball League (highest youth division)</li>
+              <li>Team Captain (U18 division)</li>
+              <li>University Representative Team, Mahidol University International College</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 class="card__title">Event Organization</h3>
+            <ul class="card__points">
+              <li>Operations &amp; Technical Committee</li>
+              <li>Co-organization of the large-scale school project “School as a State”</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================= CONTACT ============================= -->
+      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact reveal">
+          <span class="section__index">07</span>
+          <h2 class="section__title" id="contact-title">Let’s connect</h2>
+          <p class="contact__lead">
+            Open to conversations around business &amp; technology, data and digital solutions.
+          </p>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__label">Email</span>
+              <a href="mailto:azdajicleon@gmail.com">azdajicleon@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact__label">Location</span>
+              <span>Stuttgart, Germany</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__copy">© <span id="year"></span> Leon Azdajic</p>
+        <nav class="footer__legal" aria-label="Legal">
+          <button type="button" class="footer__legal-link" data-modal-open="modal-impressum">
+            Impressum
+          </button>
+          <span class="footer__sep" aria-hidden="true">·</span>
+          <button type="button" class="footer__legal-link" data-modal-open="modal-privacy">
+            Datenschutz
+          </button>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- ===================== LEGAL MODAL: IMPRESSUM ===================== -->
+    <dialog class="modal" id="modal-impressum" aria-labelledby="impressum-title">
+      <div class="modal__panel">
+        <header class="modal__head">
+          <span class="modal__eyebrow">Rechtliches</span>
+          <h2 class="modal__title" id="impressum-title">Impressum</h2>
+          <button type="button" class="modal__close" data-modal-close aria-label="Schließen">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <p class="modal__lead">Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">Diensteanbieter</h3>
+            <p>
+              Leon Azdajic<br />
+              Bernsteinstraße 128<br />
+              70619 Stuttgart<br />
+              Deutschland
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">Kontakt</h3>
+            <p>
+              E-Mail:
+              <a href="mailto:azdajicleon@gmail.com">azdajicleon@gmail.com</a>
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+            </h3>
+            <p>Leon Azdajic (Anschrift wie oben).</p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">Haftung für Inhalte</h3>
+            <p>
+              Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt erstellt. Für die
+              Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr
+              übernommen werden. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene
+              Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">Haftung für Links</h3>
+            <p>
+              Diese Seite enthält keine kommerziellen Links zu fremden Inhalten, auf deren Inhalte
+              ich keinen Einfluss habe. Für etwaige verlinkte externe Seiten ist stets der
+              jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">Urheberrecht</h3>
+            <p>
+              Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+              unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche
+              gekennzeichnet.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ================ LEGAL MODAL: DATENSCHUTZERKLÄRUNG ================ -->
+    <dialog class="modal" id="modal-privacy" aria-labelledby="privacy-title">
+      <div class="modal__panel">
+        <header class="modal__head">
+          <span class="modal__eyebrow">Rechtliches</span>
+          <h2 class="modal__title" id="privacy-title">Datenschutzerklärung</h2>
+          <button type="button" class="modal__close" data-modal-close aria-label="Schließen">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <p class="modal__lead">
+            Diese Website ist eine statische Seite ohne Cookies, ohne Tracking und ohne
+            Analyse-Werkzeuge. Es werden nur die Daten verarbeitet, die technisch unvermeidbar für
+            die Auslieferung der Seite sind.
+          </p>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">1. Verantwortlicher</h3>
+            <p>
+              Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO):<br />
+              Leon Azdajic<br />
+              E-Mail:
+              <a href="mailto:azdajicleon@gmail.com">azdajicleon@gmail.com</a><br />
+              (Vollständige Anschrift siehe Impressum.)
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">2. Hosting bei GitHub Pages</h3>
+            <p>
+              Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88
+              Colton Crossing, San Francisco, CA 94107, USA („GitHub“). Beim Aufruf der Seite
+              werden technisch notwendige Daten an die Server von GitHub übertragen und dort in
+              Server-Logfiles verarbeitet. GitHub ist ein Tochterunternehmen der Microsoft
+              Corporation; die Datenübermittlung in die USA wird auf das EU-US Data Privacy
+              Framework gestützt.
+            </p>
+            <p>
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in
+              einer sicheren und zuverlässigen Bereitstellung der Website. Weitere Informationen
+              finden Sie in der Datenschutzerklärung von GitHub:
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+                 target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">3. Server-Logfiles</h3>
+            <p>
+              Beim Besuch der Seite erfasst der Hoster automatisch Informationen, die Ihr Browser
+              übermittelt. Dies können insbesondere sein:
+            </p>
+            <ul class="legal-list">
+              <li>anonymisierte bzw. gekürzte IP-Adresse</li>
+              <li>Datum und Uhrzeit des Zugriffs</li>
+              <li>aufgerufene Datei / URL</li>
+              <li>verwendeter Browser und Betriebssystem</li>
+              <li>Referrer-URL</li>
+            </ul>
+            <p>
+              Diese Daten werden ausschließlich zur Auslieferung der Seite sowie zur Gewährleistung
+              von Sicherheit und Stabilität verarbeitet (Art. 6 Abs. 1 lit. f DSGVO) und nicht mit
+              anderen Datenquellen zusammengeführt. Die Verarbeitung und Speicherdauer liegt beim
+              Hoster GitHub.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">4. Schriftarten (lokal gehostet)</h3>
+            <p>
+              Die verwendeten Schriftarten werden lokal von diesem Server ausgeliefert. Es findet
+              <strong>keine</strong> Verbindung zu Google Fonts oder anderen externen
+              Schrift-Diensten statt; es werden hierfür keine Daten an Dritte übertragen.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">5. Keine Cookies, kein Tracking</h3>
+            <p>
+              Diese Website setzt keine Cookies, verwendet keine Web-Analyse (z. B. Google
+              Analytics), kein Tracking und keine Einbindung externer Inhalte (z. B. Karten,
+              Videos, Social-Media-Plugins). Daher ist kein Cookie-Banner erforderlich.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">6. Kontaktaufnahme per E-Mail</h3>
+            <p>
+              Wenn Sie mich per E-Mail kontaktieren, werden Ihre Angaben (z. B. Name, E-Mail-Adresse,
+              Nachricht) zur Bearbeitung der Anfrage verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f
+              DSGVO). Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter und lösche sie,
+              sobald sie für den Zweck nicht mehr erforderlich sind.
+            </p>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">7. Ihre Rechte</h3>
+            <p>Sie haben im Rahmen der DSGVO jederzeit das Recht auf:</p>
+            <ul class="legal-list">
+              <li>Auskunft über Ihre verarbeiteten Daten (Art. 15)</li>
+              <li>Berichtigung unrichtiger Daten (Art. 16)</li>
+              <li>Löschung (Art. 17)</li>
+              <li>Einschränkung der Verarbeitung (Art. 18)</li>
+              <li>Datenübertragbarkeit (Art. 20)</li>
+              <li>Widerspruch gegen die Verarbeitung (Art. 21)</li>
+            </ul>
+          </section>
+
+          <section class="legal-block">
+            <h3 class="legal-block__title">8. Beschwerderecht</h3>
+            <p>
+              Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die
+              Verarbeitung Ihrer personenbezogenen Daten zu beschweren (Art. 77 DSGVO).
+            </p>
+          </section>
+
+          <p class="modal__meta">Stand: Juni 2026</p>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

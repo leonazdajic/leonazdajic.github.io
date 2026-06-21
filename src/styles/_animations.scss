@@ -1,0 +1,66 @@
+// ============================================================
+//  Animations — reveal on scroll + keyframes
+// ============================================================
+
+@use "variables" as *;
+
+// Reveal-on-scroll: hidden initial state, animated in by IntersectionObserver
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s $ease,
+    transform 0.7s $ease;
+  will-change: opacity, transform;
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Stagger children of a revealed timeline/cards container
+.station.is-visible,
+.card.is-visible {
+  transition-delay: 0.05s;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 215, 210, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(0, 215, 210, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 215, 210, 0);
+  }
+}
+
+@keyframes scroll-hint {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+// Respect reduced-motion preferences
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero__pulse,
+  .hero__scroll-line {
+    animation: none;
+  }
+}
