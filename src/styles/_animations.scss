@@ -63,4 +63,8 @@
   .hero__scroll-line {
     animation: none;
   }
+  .hero__card,
+  .hero__card-cta svg {
+    transition: none;
+  }
 }
