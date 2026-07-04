@@ -27,7 +27,8 @@ For GitHub Pages project sites served from a sub-path, build with the base path:
 
 - **Content lives in `index.html`**, not in JS. All CV copy is hand-authored
   semantic HTML (one `<section>` per area: hero, profile, experience, education,
-  skills, awards, beyond, contact). There is no CMS, data file or templating —
+  project, skills, awards, beyond, contact). There is no CMS, data file or
+  templating —
   to change CV content, edit the markup directly. The canonical source content
   is the user's `Leon_Azdajic_CV.md`; keep the rendered text faithful to it.
 
@@ -46,8 +47,15 @@ For GitHub Pages project sites served from a sub-path, build with the base path:
     elements (`dialog.modal`) for free focus-trapping/Esc/inert. Open triggers
     are `[data-modal-open="<dialog id>"]`, close via `[data-modal-close]` or a
     backdrop click; it also scroll-locks the body and restores focus on close.
-  All three **no-op or render a static fallback under `prefers-reduced-motion`**;
-  preserve that behaviour when editing.
+  - `slider.ts` — screenshot slider in the featured-project section
+    (`#project-slider`). The track scrolls natively with CSS scroll-snap; JS
+    adds arrows, dots, keyboard navigation and mouse dragging. Slide positions
+    are measured relative to the first slide (offsetLeft is relative to the
+    positioned `.project` card). Screenshot assets live in `public/apicon/`
+    (WebP, sensitive details pixelated at export time).
+  All modules **no-op or render a static fallback under
+  `prefers-reduced-motion`** (the slider scrolls instantly instead of
+  smoothly); preserve that behaviour when editing.
 
 - **Styles (`src/styles/`)** use modern Dart Sass `@use`. Every partial that
   references tokens/mixins must start with `@use "variables" as *;` — they do

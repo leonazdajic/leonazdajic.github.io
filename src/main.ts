@@ -13,12 +13,14 @@ import { initNav } from "./modules/nav";
 import { initReveal } from "./modules/animations";
 import { initBackground } from "./modules/background";
 import { initModals } from "./modules/modals";
+import { initSlider } from "./modules/slider";
 
 const start = () => {
   initNav();
   initReveal();
   initBackground();
   initModals();
+  initSlider();
 
   // Current year in the footer
   const yearEl = document.getElementById("year");

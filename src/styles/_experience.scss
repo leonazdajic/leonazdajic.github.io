@@ -167,4 +167,19 @@
       }
     }
   }
+
+  &__more {
+    display: inline-block;
+    margin-left: 0.35rem;
+    font-family: $font-display;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $accent;
+    border-bottom: 1px solid $accent-line;
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
 }

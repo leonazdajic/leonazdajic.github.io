@@ -40,6 +40,7 @@
       <nav class="nav__links" aria-label="Section navigation">
         <a href="#profile" class="nav__link">Profile</a>
         <a href="#experience" class="nav__link">Experience</a>
+        <a href="#project" class="nav__link">Project</a>
         <a href="#education" class="nav__link">Education</a>
         <a href="#skills" class="nav__link">Skills</a>
         <a href="#awards" class="nav__link">Awards</a>
@@ -141,6 +142,7 @@
                     Excel master data against the live product API across up to 25 European
                     markets, detecting and classifying data deviations by severity and
                     generating structured reports.
+                    <a class="station__more" href="#project">See the full project ↓</a>
                   </li>
                   <li>
                     Replaced a fully manual validation process (~1 hour per market, 2–3 weeks
@@ -246,10 +248,215 @@
         </article>
       </section>
 
+      <!-- ============================= FEATURED PROJECT ============================= -->
+      <section class="section" id="project" aria-labelledby="project-title">
+        <div class="section__head reveal">
+          <span class="section__index">03</span>
+          <h2 class="section__title" id="project-title">Featured Project</h2>
+        </div>
+
+        <article class="project reveal">
+          <header class="project__head">
+            <div>
+              <p class="project__eyebrow">Daimler Truck AG · Digital Solutions, Mercedes-Benz Trucks</p>
+              <h3 class="project__name">ApiCon Masterdata Comparison</h3>
+              <p class="project__tagline">
+                Automated product data quality validation across up to 25 European markets.
+              </p>
+            </div>
+            <span class="project__badge">
+              <span class="project__badge-dot" aria-hidden="true"></span>
+              In production use
+            </span>
+          </header>
+
+          <div class="project__story">
+            <p>
+              Digital truck services — connectivity packages and vehicle-related digital
+              products — are rolled out across Europe through a central product API. Verifying
+              that the delivered data matched the master source used to be fully manual:
+              roughly an hour of field-by-field checking per market, rollouts stretching over
+              weeks, a single-person bottleneck at headquarters, and subtle errors in
+              foreign-language markets slipping through unnoticed.
+            </p>
+            <p>
+              I designed and built a web application that does this automatically. It validates
+              the Excel master data field by field against the live API for every selected
+              market, classifies each deviation by business impact, condenses the results into
+              a weighted data quality score and produces a ready-to-share report. Quality
+              control moved from a reactive spot check to a repeatable, auditable process that
+              both headquarters and the offshore data team run independently.
+            </p>
+          </div>
+
+          <ul class="project__stats" aria-label="Project impact">
+            <li class="project__stat">
+              <span class="project__stat-value">25</span>
+              <span class="project__stat-label">European markets validated in a single run</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">~1&thinsp;h → min</span>
+              <span class="project__stat-label">checking time per market — manual to automated</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">100%</span>
+              <span class="project__stat-label">of fields compared &amp; classified by severity</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">Audit-ready</span>
+              <span class="project__stat-label">every run stored, with history &amp; delta tracking</span>
+            </li>
+          </ul>
+
+          <!-- Screenshot slider — follows the tool's own guided workflow -->
+          <div class="slider reveal" id="project-slider">
+            <div
+              class="slider__viewport"
+              tabindex="0"
+              role="group"
+              aria-roledescription="carousel"
+              aria-label="ApiCon application screenshots — use arrow keys to browse"
+            >
+              <ul class="slider__track">
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-1-environment.webp"
+                      alt="ApiCon wizard step: selecting the target environment, staging or production"
+                      width="1759" height="934" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">01</span>
+                      Guided setup — pick the target environment (staging or production)
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-2-markets.webp"
+                      alt="ApiCon wizard step: selecting European markets to validate, with presets"
+                      width="1762" height="936" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">02</span>
+                      Choose markets — up to 25 European markets, via presets or custom selection
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-3-files.webp"
+                      alt="ApiCon wizard step: uploading the Excel master data file as reference source"
+                      width="1780" height="945" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">03</span>
+                      Upload the Excel master data — the single source of truth for the check
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-4-comparison.webp"
+                      alt="ApiCon comparison in progress: markets validated in parallel against the live API"
+                      width="1788" height="949" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">04</span>
+                      Markets are validated in parallel against the live product API
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-5-results.webp"
+                      alt="ApiCon results: deviations counted and broken down by severity"
+                      width="1762" height="936" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">05</span>
+                      Results at a glance — every deviation counted and classified by severity
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/apicon/step-6-delta.webp"
+                      alt="ApiCon delta view: comparison to the previous run showing new, open and fixed deviations"
+                      width="1773" height="941" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">06</span>
+                      Delta to the previous run — what is new, still open, or fixed
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__controls">
+              <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15 5l-7 7 7 7" />
+                </svg>
+              </button>
+              <div class="slider__dots" data-slider-dots></div>
+              <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="project__how reveal">
+            <h4 class="project__subtitle">How it works</h4>
+            <ol class="project__steps">
+              <li>
+                <span class="project__step-num" aria-hidden="true">1</span>
+                Upload the Excel master data that serves as the reference source.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">2</span>
+                The tool queries the live product API for every selected market — in parallel.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">3</span>
+                Every field is compared; each deviation is classified by business impact.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">4</span>
+                Out come a weighted quality score, a prioritized fix list and a full report.
+              </li>
+            </ol>
+          </div>
+
+          <footer class="project__foot reveal">
+            <ul class="tags tags--inline" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Flask</li>
+              <li>REST APIs</li>
+              <li>SQLite</li>
+              <li>pandas</li>
+              <li>pytest</li>
+            </ul>
+            <p class="project__note">
+              Built end to end — from stakeholder workshops and requirements to architecture,
+              implementation, testing and rollout. Also the subject of my Design Science
+              Research paper at DHBW Stuttgart.
+            </p>
+          </footer>
+        </article>
+      </section>
+
       <!-- ============================= EDUCATION ============================= -->
       <section class="section" id="education" aria-labelledby="education-title">
         <div class="section__head reveal">
-          <span class="section__index">03</span>
+          <span class="section__index">04</span>
           <h2 class="section__title" id="education-title">Education</h2>
         </div>
 
@@ -316,7 +523,7 @@
       <!-- ============================= SKILLS ============================= -->
       <section class="section" id="skills" aria-labelledby="skills-title">
         <div class="section__head reveal">
-          <span class="section__index">04</span>
+          <span class="section__index">05</span>
           <h2 class="section__title" id="skills-title">Skills</h2>
         </div>
 
@@ -367,7 +574,7 @@
       <!-- ============================= AWARDS ============================= -->
       <section class="section" id="awards" aria-labelledby="awards-title">
         <div class="section__head reveal">
-          <span class="section__index">05</span>
+          <span class="section__index">06</span>
           <h2 class="section__title" id="awards-title">Certifications &amp; Awards</h2>
         </div>
 
@@ -389,7 +596,7 @@
       <!-- ============================= BEYOND WORK ============================= -->
       <section class="section" id="beyond" aria-labelledby="beyond-title">
         <div class="section__head reveal">
-          <span class="section__index">06</span>
+          <span class="section__index">07</span>
           <h2 class="section__title" id="beyond-title">Beyond Work</h2>
         </div>
 
@@ -415,7 +622,7 @@
       <!-- ============================= CONTACT ============================= -->
       <section class="section section--contact" id="contact" aria-labelledby="contact-title">
         <div class="contact reveal">
-          <span class="section__index">07</span>
+          <span class="section__index">08</span>
           <h2 class="section__title" id="contact-title">Let’s connect</h2>
           <p class="contact__lead">
             Open to conversations around business &amp; technology, data and digital solutions.
