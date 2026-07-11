@@ -95,7 +95,17 @@
     gap: 1rem;
   }
 
-  // ---- Featured project teaser card ----
+  // ---- Featured project teaser cards ----
+  &__projects {
+    display: grid;
+    gap: 1rem;
+
+    @include tablet {
+      margin-top: 2.75rem;
+      max-width: 420px;
+    }
+  }
+
   &__card {
     display: block;
     padding: 1.15rem;
@@ -115,10 +125,6 @@
       box-shadow: 0 14px 44px rgba(0, 0, 0, 0.4), 0 0 26px $accent-glow;
     }
 
-    @include tablet {
-      margin-top: 2.75rem;
-      max-width: 420px;
-    }
   }
 
   &__card-eyebrow {
