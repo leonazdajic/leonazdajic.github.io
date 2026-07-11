@@ -1,5 +1,5 @@
 // ============================================================
-//  Featured project — ApiCon showcase card + screenshot slider
+//  Featured projects — showcase cards + screenshot sliders
 // ============================================================
 
 @use "variables" as *;
@@ -13,6 +13,11 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%),
     $bg-secondary;
   overflow: hidden;
+  scroll-margin-top: calc($nav-height + 1.5rem);
+
+  &--secondary {
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+  }
 
   &::before {
     content: "";

@@ -40,7 +40,7 @@
       <nav class="nav__links" aria-label="Section navigation">
         <a href="#profile" class="nav__link">Profile</a>
         <a href="#experience" class="nav__link">Experience</a>
-        <a href="#project" class="nav__link">Project</a>
+        <a href="#project" class="nav__link">Projects</a>
         <a href="#education" class="nav__link">Education</a>
         <a href="#skills" class="nav__link">Skills</a>
         <a href="#awards" class="nav__link">Awards</a>
@@ -78,33 +78,62 @@
             </div>
           </div>
 
-          <!-- Featured project teaser — links to the full section below -->
-          <a
-            class="hero__card reveal"
-            href="#project"
-            aria-label="Featured project: ApiCon Masterdata Comparison — view details"
-          >
-            <span class="hero__card-eyebrow">
-              <span class="hero__card-dot" aria-hidden="true"></span>
-              Featured Project
-            </span>
-            <img
-              class="hero__card-img"
-              src="/apicon/step-5-results.webp"
-              alt="Preview of the ApiCon Masterdata Comparison tool showing validation results"
-              width="1762" height="936"
-            />
-            <span class="hero__card-title">ApiCon Masterdata Comparison</span>
-            <span class="hero__card-sub">
-              Automated data quality validation across 25 markets · Daimler Truck
-            </span>
-            <span class="hero__card-cta">
-              View project
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </span>
-          </a>
+          <!-- Featured project teasers — link to the full case studies below -->
+          <div class="hero__projects">
+            <a
+              class="hero__card reveal"
+              href="#project"
+              aria-label="Featured project: ApiCon Masterdata Comparison — view details"
+            >
+              <span class="hero__card-eyebrow">
+                <span class="hero__card-dot" aria-hidden="true"></span>
+                Featured Project
+              </span>
+              <img
+                class="hero__card-img"
+                src="/apicon/step-5-results.webp"
+                alt="Preview of the ApiCon Masterdata Comparison tool showing validation results"
+                width="1762" height="936"
+              />
+              <span class="hero__card-title">ApiCon Masterdata Comparison</span>
+              <span class="hero__card-sub">
+                Automated data quality validation across 25 markets · Daimler Truck
+              </span>
+              <span class="hero__card-cta">
+                View project
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              class="hero__card reveal"
+              href="#rental-project"
+              aria-label="Featured project: Apartment Rental Platform — view details"
+            >
+              <span class="hero__card-eyebrow">
+                <span class="hero__card-dot" aria-hidden="true"></span>
+                Featured Project
+              </span>
+              <img
+                class="hero__card-img"
+                src="/rental/slide-2-dashboard.webp"
+                alt="Preview of the Apartment Rental Platform management dashboard"
+                width="1760" height="929" loading="lazy"
+              />
+              <span class="hero__card-title">Apartment Rental Platform</span>
+              <span class="hero__card-sub">
+                End-to-end rental operations · from inquiry to move-out
+              </span>
+              <span class="hero__card-cta">
+                View project
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
         <a href="#profile" class="hero__scroll" aria-label="Scroll to content">
           <span class="hero__scroll-line"></span>
@@ -278,11 +307,11 @@
         </article>
       </section>
 
-      <!-- ============================= FEATURED PROJECT ============================= -->
+      <!-- ============================= FEATURED PROJECTS ============================= -->
       <section class="section" id="project" aria-labelledby="project-title">
         <div class="section__head reveal">
           <span class="section__index">03</span>
-          <h2 class="section__title" id="project-title">Featured Project</h2>
+          <h2 class="section__title" id="project-title">Featured Projects</h2>
         </div>
 
         <article class="project reveal">
@@ -478,6 +507,213 @@
               Built end to end — from stakeholder workshops and requirements to architecture,
               implementation, testing and rollout. Also the subject of my Design Science
               Research paper at DHBW Stuttgart.
+            </p>
+          </footer>
+        </article>
+
+        <article class="project project--secondary reveal" id="rental-project">
+          <header class="project__head">
+            <div>
+              <p class="project__eyebrow">Independent full-stack project · Rental operations</p>
+              <h3 class="project__name">Apartment Rental Platform</h3>
+              <p class="project__tagline">
+                One secure workflow for furnished-apartment inquiries, reservations, contracts
+                and ongoing rental management.
+              </p>
+            </div>
+            <span class="project__badge">
+              <span class="project__badge-dot" aria-hidden="true"></span>
+              End-to-end build
+            </span>
+          </header>
+
+          <div class="project__story">
+            <p>
+              Managing monthly apartment rentals previously meant coordinating inquiries,
+              availability, documents and deadlines by hand across email and Excel. That made
+              the process time-consuming and left room for duplicate reservations, missed
+              follow-ups and fragmented customer data.
+            </p>
+            <p>
+              I built a complete public website and management dashboard around one reliable
+              workflow. Applicants can check live availability and submit an inquiry without an
+              account; the system then blocks the requested period, guides the administrator
+              from screening to move-out, sends transactional emails and keeps every important
+              action traceable.
+            </p>
+          </div>
+
+          <ul class="project__stats" aria-label="Apartment Rental Platform impact">
+            <li class="project__stat">
+              <span class="project__stat-value">1 workflow</span>
+              <span class="project__stat-label">replaces scattered email and Excel processes</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">5-day holds</span>
+              <span class="project__stat-label">automatically reserve requested periods during review</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">~700 tests</span>
+              <span class="project__stat-label">run against PostgreSQL, including booking guarantees</span>
+            </li>
+            <li class="project__stat">
+              <span class="project__stat-value">GDPR by design</span>
+              <span class="project__stat-label">retention rules and cascading deletion built in</span>
+            </li>
+          </ul>
+
+          <div class="slider reveal" id="rental-slider">
+            <div
+              class="slider__viewport"
+              tabindex="0"
+              role="group"
+              aria-roledescription="carousel"
+              aria-label="Apartment Rental Platform screenshots — use arrow keys to browse"
+            >
+              <ul class="slider__track">
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-1-inquiry.webp"
+                      alt="Public apartment inquiry form with a validated rental period and price preview"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">01</span>
+                      Guided inquiry — live availability, server-side checks and a clear price preview
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-2-dashboard.webp"
+                      alt="Rental management dashboard with key metrics, open inquiries and reminders"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">02</span>
+                      Operational overview — priorities, active holds and deadlines in one place
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-3-workflow.webp"
+                      alt="Inquiry detail view with applicant data, document status and workflow actions"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">03</span>
+                      Structured case handling — every applicant, document and next action connected
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-4-calendar.webp"
+                      alt="Monthly occupancy calendar showing free, reserved and occupied apartments"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">04</span>
+                      Conflict-free planning — bookings, reservations and blocks in one calendar
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-5-emails.webp"
+                      alt="Transactional email log with delivery status and retry actions"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">05</span>
+                      Automatic communication — delivery status, retries and full context retained
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-6-reports.webp"
+                      alt="Rental reporting dashboard with revenue, occupancy and conversion metrics"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">06</span>
+                      Business reporting — revenue, occupancy and conversion derived from live data
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="slider__slide">
+                  <figure class="slider__figure">
+                    <img
+                      src="/rental/slide-7-audit.webp"
+                      alt="Append-only audit trail of administrative and automated system actions"
+                      width="1760" height="929" loading="lazy" draggable="false"
+                    />
+                    <figcaption class="slider__caption">
+                      <span class="slider__caption-num">07</span>
+                      Audit trail — critical administrator and system actions remain traceable
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="slider__controls">
+              <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M15 5l-7 7 7 7" />
+                </svg>
+              </button>
+              <div class="slider__dots" data-slider-dots></div>
+              <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="project__how reveal">
+            <h4 class="project__subtitle">From inquiry to move-out</h4>
+            <ol class="project__steps">
+              <li>
+                <span class="project__step-num" aria-hidden="true">1</span>
+                A server-validated inquiry checks availability and prevents conflicting periods.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">2</span>
+                Preliminary approval creates a five-day hold and sends the document checklist.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">3</span>
+                The dashboard drives review, acceptance, rental status and every follow-up.
+              </li>
+              <li>
+                <span class="project__step-num" aria-hidden="true">4</span>
+                Scheduled jobs handle emails, deadlines and GDPR-compliant data deletion.
+              </li>
+            </ol>
+          </div>
+
+          <footer class="project__foot reveal">
+            <ul class="tags tags--inline" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>HTML &amp; CSS</li>
+              <li>pytest</li>
+              <li>2FA / TOTP</li>
+            </ul>
+            <p class="project__note">
+              Designed as a production-minded system: database-level booking protection,
+              idempotent email processing, health monitoring, layered admin security and an
+              append-only audit trail — with core business rules kept out of the UI.
             </p>
           </footer>
         </article>

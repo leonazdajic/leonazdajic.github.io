@@ -1,13 +1,14 @@
 /**
- * Screenshot slider for the featured project:
+ * Screenshot sliders for the featured projects:
  *  - the track scrolls natively with CSS scroll-snap (smooth on touch/trackpad)
  *  - JS adds arrows, dots, keyboard navigation and mouse dragging
  *  - under `prefers-reduced-motion` all programmatic scrolling is instant
  */
 export function initSlider(): void {
-  const root = document.getElementById("project-slider");
-  if (!root) return;
+  document.querySelectorAll<HTMLElement>(".slider").forEach(setupSlider);
+}
 
+function setupSlider(root: HTMLElement): void {
   const viewport = root.querySelector<HTMLElement>(".slider__viewport");
   const slides = Array.from(root.querySelectorAll<HTMLElement>(".slider__slide"));
   const prev = root.querySelector<HTMLButtonElement>("[data-slider-prev]");
@@ -60,7 +61,8 @@ export function initSlider(): void {
     let best = 0;
     let bestDist = Infinity;
     slides.forEach((slide, i) => {
-      const dist = Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - mid);
+      const slideMid = slide.offsetLeft - slides[0].offsetLeft + slide.offsetWidth / 2;
+      const dist = Math.abs(slideMid - mid);
       if (dist < bestDist) {
         bestDist = dist;
         best = i;
