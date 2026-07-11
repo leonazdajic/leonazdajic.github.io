@@ -11,17 +11,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: $max-width;
+  max-width: $hero-max-width;
   margin: 0 auto;
   padding: $nav-height clamp(1.25rem, 5vw, 2.5rem) 4rem;
 
   &__inner {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 370px);
-    gap: clamp(2.5rem, 6vw, 5rem);
+    grid-template-columns: minmax(500px, 1.05fr) minmax(540px, 0.95fr);
+    gap: clamp(3.5rem, 7vw, 7rem);
     align-items: center;
 
-    @include tablet {
+    @media (max-width: 1200px) {
       display: block;
       max-width: 760px;
     }
@@ -98,17 +98,20 @@
   // ---- Featured project teaser cards ----
   &__projects {
     display: grid;
-    gap: 1rem;
+    gap: 1.25rem;
 
-    @include tablet {
-      margin-top: 2.75rem;
-      max-width: 420px;
+    @media (max-width: 1200px) {
+      margin-top: 3.25rem;
+      max-width: 760px;
     }
   }
 
   &__card {
-    display: block;
-    padding: 1.15rem;
+    display: grid;
+    grid-template-columns: minmax(210px, 0.95fr) minmax(210px, 1.05fr);
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 1.35rem;
+    padding: 1.2rem;
     border: 1px solid $border;
     border-radius: 16px;
     background:
@@ -118,6 +121,10 @@
       transform $transition,
       border-color $transition,
       box-shadow $transition;
+
+    @include mobile {
+      display: block;
+    }
 
     &:hover {
       transform: translateY(-3px);
@@ -137,7 +144,9 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: $accent;
-    margin-bottom: 0.9rem;
+    grid-column: 2;
+    grid-row: 1;
+    margin-bottom: 0.65rem;
   }
 
   &__card-dot {
@@ -150,24 +159,43 @@
 
   &__card-img {
     display: block;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: stretch;
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 170px;
+    object-fit: cover;
+    object-position: center;
     border: 1px solid $border-strong;
     border-radius: 10px;
     background: #f7f7f7;
+
+    @include mobile {
+      height: auto;
+      min-height: 0;
+    }
   }
 
   &__card-title {
     display: block;
+    grid-column: 2;
+    grid-row: 2;
     font-family: $font-display;
     font-size: 1.02rem;
     font-weight: 600;
     color: $text-primary;
-    margin-top: 1rem;
+    margin-top: 0;
+
+    @include mobile {
+      margin-top: 1rem;
+    }
   }
 
   &__card-sub {
     display: block;
+    grid-column: 2;
+    grid-row: 3;
     font-size: 0.85rem;
     line-height: 1.55;
     color: $text-secondary;
@@ -176,6 +204,9 @@
 
   &__card-cta {
     display: inline-flex;
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: start;
     align-items: center;
     gap: 0.45rem;
     font-family: $font-display;
@@ -226,7 +257,7 @@
       animation: scroll-hint 1.8s $ease infinite;
     }
 
-    @include mobile {
+    @media (max-width: 1200px) {
       display: none;
     }
   }
