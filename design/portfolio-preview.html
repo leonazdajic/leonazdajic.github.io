@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leon Azdajic — Social preview source</title>
+  <style>
+    @font-face { font-family: Space; src: url('../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2'); font-weight: 300 700; }
+    @font-face { font-family: Inter; src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2'); font-weight: 100 900; }
+    * { box-sizing: border-box; }
+    body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0a0a0f; color: #f1f2f5; font-family: Inter, sans-serif; }
+    main { position: relative; height: 630px; padding: 44px 56px 30px; background: radial-gradient(ellipse at 100% 0%, #00d7d20b, transparent 55%); }
+    .topline { display: flex; align-items: center; justify-content: space-between; font-size: 15px; letter-spacing: 2.5px; text-transform: uppercase; color: #9aa0ad; }
+    .eyebrow { display: flex; align-items: center; gap: 13px; }
+    .eyebrow::before { content: ''; width: 26px; height: 2px; background: #00d7d2; }
+    .url { letter-spacing: 0; text-transform: none; font-size: 16px; }
+    h1 { font-family: Space, sans-serif; font-size: 72px; font-weight: 600; letter-spacing: -3px; line-height: 1.08; margin: 25px 0 9px; }
+    .subtitle { margin: 0; font-size: 23px; line-height: 1.4; color: #aeb4bf; }
+    .subtitle strong { color: #f1f2f5; font-weight: 500; }
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 31px; }
+    article { overflow: hidden; border: 1px solid #ffffff24; border-radius: 12px; background: #101018; }
+    .caption { padding: 20px 23px 19px; }
+    h2 { margin: 0 0 6px; font-family: Space, sans-serif; font-weight: 500; font-size: 23px; letter-spacing: -.5px; }
+    .caption p { margin: 0; font-size: 15px; color: #9aa0ad; }
+    .shot { height: 175px; position: relative; overflow: hidden; margin: 0 17px; border-radius: 6px 6px 0 0; background: #f5f6f8; }
+    .shot img { position: absolute; display: block; max-width: none; }
+    .apicon img { width: 730px; left: -204px; top: -88px; }
+    .rental img { width: 637px; left: -113px; top: -73px; }
+    footer { display: flex; justify-content: space-between; align-items: center; margin-top: 25px; padding-top: 17px; border-top: 1px solid #ffffff18; font-size: 16px; color: #9aa0ad; }
+    .cta { color: #00d7d2; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topline"><span class="eyebrow">Portfolio &amp; selected projects</span><span class="url">leonazdajic.github.io</span></div>
+    <h1>Leon Azdajic</h1>
+    <p class="subtitle"><strong>Business &amp; IT</strong> · Data analytics · Process automation</p>
+    <div class="projects">
+      <article>
+        <div class="caption"><h2>ApiCon · Master Data Validation</h2><p>Built during my rotation at Daimler Truck</p></div>
+        <div class="shot apicon"><img src="../public/apicon/step-5-results.webp" alt="ApiCon comparison results"></div>
+      </article>
+      <article>
+        <div class="caption"><h2>Rental Management Platform</h2><p>Independent software project</p></div>
+        <div class="shot rental"><img src="../public/rental/slide-4-calendar.webp" alt="Apartment occupancy calendar"></div>
+      </article>
+    </div>
+    <footer><span>AI-assisted development. Practical business tools.</span><span class="cta">Explore the projects ↗</span></footer>
+  </main>
+</body>
+</html>
