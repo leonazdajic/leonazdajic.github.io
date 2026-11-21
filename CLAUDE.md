@@ -115,7 +115,7 @@ server does not enforce it. Use `npm run preview` to catch CSP violations.
   up; re-check that if either changes. The original photo is not in the repo.
 
 - **Social preview:** `design/portfolio-preview.html` is the source for the
-  checked-in `public/social/portfolio-preview-v3.png`. Render it at a
+  checked-in `public/social/portfolio-preview-v4.png`. Render it at a
   1200×630 viewport with DPR 1 (see `design/README.md`). If you replace the
   image, give it a new filename and update both image meta tags in
   `index.html` so LinkedIn doesn't keep serving the old cached image.
