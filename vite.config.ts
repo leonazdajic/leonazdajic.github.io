@@ -1,4 +1,10 @@
+import { existsSync } from "node:fs";
 import { defineConfig } from "vite";
+
+// Public CV download. Every link to it carries `data-cv`; while the PDF is
+// missing those links are stripped so the page never offers a broken download.
+const cvFile = "public/cv/leon-azdajic-cv.pdf";
+const cvLink = /\s*<a\b[^>]*\bdata-cv\b[^>]*>[\s\S]*?<\/a>/g;
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -24,6 +30,14 @@ const contentSecurityPolicy = [
 // For Netlify / Vercel / custom domains the default "/" is correct.
 export default defineConfig({
   plugins: [
+    {
+      name: "cv-download-guard",
+      transformIndexHtml(html) {
+        if (existsSync(cvFile)) return html;
+        console.warn(`[cv] ${cvFile} not found, CV download links removed.`);
+        return html.replace(cvLink, "");
+      },
+    },
     {
       name: "production-security-meta",
       apply: "build",

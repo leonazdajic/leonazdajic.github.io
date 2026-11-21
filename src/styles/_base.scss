@@ -1,5 +1,6 @@
 // ============================================================
-//  Base — reset, typography, layout primitives, background
+//  Base — reset, typography, primitives (container, section,
+//  buttons, mono, frame)
 // ============================================================
 
 @use "variables" as *;
@@ -13,94 +14,75 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: $nav-height;
+  scroll-padding-top: calc(#{$nav-height} + 1rem);
   -webkit-text-size-adjust: 100%;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(15, 92, 107, 0.12);
 }
 
 body {
-  background: $bg-primary;
-  color: $text-primary;
-  font-family: $font-body;
+  background: $bg;
+  color: $text-body;
+  font-family: $font;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: 400;
-  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  font-feature-settings: "cv11", "ss01"; // Inter: single-storey a, open digits
   min-height: 100vh;
 }
 
-// Fixed tech background canvas (grid + glow)
-#bg-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
-// Radial vignette + top petrol glow over the canvas
-.bg-vignette {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(120% 80% at 50% -10%, $accent-glow 0%, transparent 45%),
-    radial-gradient(100% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+ul,
+ol {
+  list-style: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: $font-display;
+  color: $text;
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 strong {
-  color: $text-primary;
+  color: $text;
   font-weight: 600;
 }
 
-::selection {
-  background: $accent;
-  color: $bg-primary;
+a {
+  color: $accent;
+  text-decoration: underline;
+  text-decoration-color: $accent-line;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition:
+    color $transition,
+    text-decoration-color $transition;
+
+  &:hover {
+    color: $accent-hover;
+    text-decoration-color: currentColor;
+  }
 }
 
-// Custom scrollbar
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: $bg-primary;
-}
-::-webkit-scrollbar-thumb {
-  background: $border-strong;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: $accent-deep;
+::selection {
+  background: rgba(15, 92, 107, 0.16);
+  color: $text;
 }
 
 .skip-link {
@@ -109,68 +91,152 @@ strong {
   top: 0;
   z-index: 100;
   background: $accent;
-  color: $bg-primary;
+  color: #fff;
   padding: 0.6rem 1rem;
-  border-radius: 0 0 8px 0;
   font-weight: 600;
+  text-decoration: none;
   &:focus {
     left: 0;
   }
 }
 
-// Visible keyboard focus
 :focus-visible {
   outline: 2px solid $accent;
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
-.accent {
-  color: $accent;
+.mono {
+  font-family: $mono;
+  font-feature-settings: normal;
+  letter-spacing: -0.01em;
 }
 
-// ---- Section scaffolding ----
-main {
-  position: relative;
-  z-index: 1;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// ---- Layout primitives ----
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  // Landscape iPhones: keep content clear of the notch
+  padding-left: max(clamp(1rem, 4vw, 2rem), env(safe-area-inset-left));
+  padding-right: max(clamp(1rem, 4vw, 2rem), env(safe-area-inset-right));
 }
 
 .section {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: clamp(4rem, 9vw, 7.5rem) clamp(1.25rem, 5vw, 2.5rem);
+  padding-top: $section-space;
 
-  &__head {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 2.75rem;
+  // Hairline between consecutive light sections, aligned to the content edge.
+  & + & > .container::before {
+    content: "";
+    display: block;
+    grid-column: 1 / -1;
+    border-top: 1px solid $border;
+    margin-bottom: $section-space;
   }
 
-  &__index {
-    font-family: $font-display;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: $accent;
-    letter-spacing: 0.25em;
-    padding-top: 0.4rem;
+  &__head {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  // Title left, intro right
+  &__head--row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: end;
+    gap: 1rem $gutter;
+
+    .section__intro {
+      margin-top: 0;
+      justify-self: end;
+      max-width: 52ch;
+    }
+
+    @include tablet {
+      grid-template-columns: minmax(0, 1fr);
+
+      .section__intro {
+        justify-self: start;
+      }
+    }
   }
 
   &__title {
-    font-size: clamp(1.75rem, 4.5vw, 2.6rem);
-    position: relative;
-    padding-bottom: 0.6rem;
+    margin-top: 0.5rem;
+    font-size: clamp(1.625rem, 3.5vw, 2.25rem);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 56px;
-      height: 2px;
-      background: linear-gradient(90deg, $accent, transparent);
+  &__intro {
+    margin-top: 1rem;
+    max-width: 60ch;
+    color: $muted;
+  }
+}
+
+// ---- Cards (education, skills, awards) ----
+.card {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+
+  p {
+    font-size: 0.9375rem;
+  }
+
+  &__meta {
+    color: $muted;
+    font-size: 0.75rem;
+  }
+
+  &__title {
+    margin-top: 0.5rem;
+    font-size: 1.0625rem;
+    line-height: 1.35;
+  }
+
+  &__meta + &__title {
+    margin-top: 0.5rem;
+  }
+
+  &__sub {
+    margin-top: 0.25rem;
+    color: $muted;
+  }
+
+  &__label {
+    margin: 1.25rem 0 0.375rem;
+    color: $accent;
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    &:first-child {
+      margin-top: 0;
     }
   }
+
+  &__text {
+    margin-top: 0.75rem;
+  }
+
+  .points {
+    margin-top: 0.75rem;
+  }
+}
+
+.eyebrow {
+  color: $muted;
+  font-size: 0.8125rem;
 }
 
 // ---- Buttons ----
@@ -178,48 +244,147 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: $font-display;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  padding: 0.85rem 1.6rem;
-  border-radius: 999px;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0 1.25rem;
+  border-radius: $radius;
   border: 1px solid transparent;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
   cursor: pointer;
   transition:
-    transform $transition,
-    box-shadow $transition,
     background $transition,
     border-color $transition,
-    color $transition;
+    color $transition,
+    transform $transition;
 
-  &--primary {
-    background: $accent;
-    color: $bg-primary;
-    box-shadow: 0 0 0 rgba(0, 215, 210, 0);
+  &:active {
+    transform: translateY(1px);
+  }
+
+  // Small file-type hint, e.g. "Download CV  PDF"
+  &__note {
+    font-family: $mono;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+  }
+
+  &--light {
+    background: $ink-text;
+    color: $ink;
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px $accent-glow;
+      background: #fff;
+      color: $ink;
     }
   }
 
-  &--ghost {
-    border-color: $border-strong;
-    color: $text-primary;
+  &--line {
+    border-color: rgba(255, 255, 255, 0.22);
+    color: $ink-text;
     &:hover {
-      border-color: $accent-line;
-      color: $accent;
-      transform: translateY(-2px);
+      border-color: $ink-accent;
+      color: #fff;
+    }
+  }
+
+  &--ink {
+    background: $ink;
+    color: #fff;
+    &:hover {
+      background: $accent;
+      color: #fff;
+    }
+    &:disabled {
+      opacity: 0.55;
+      cursor: progress;
+      background: $ink;
     }
   }
 }
 
-.footer {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 2.5rem 1.5rem;
-  border-top: 1px solid $border;
-  color: $text-muted;
-  font-size: 0.85rem;
+// ---- Window frame (project visuals, demo) ----
+.frame {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-frame;
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 34px;
+    padding: 0 0.875rem;
+    background: $surface-bar;
+    border-bottom: 1px solid $border;
+  }
+
+  &__dots {
+    display: inline-flex;
+    gap: 6px;
+    flex-shrink: 0;
+
+    i {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d6d6cf;
+    }
+  }
+
+  &__title {
+    color: $muted;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__media {
+    aspect-ratio: 16 / 10;
+    background: $surface-sunken;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left top;
+      transition: transform 400ms $ease-out;
+    }
+
+    &--diagram img {
+      object-fit: contain;
+    }
+  }
+}
+
+// Small mono tags (tech stack)
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+
+  li {
+    padding: 0.125rem 0.5rem;
+    border: 1px solid $border;
+    border-radius: 4px;
+    color: $muted;
+    font-size: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }

@@ -2,16 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
 
     <title>Leon Azdajic — Business Analysis &amp; Process Automation | Portfolio</title>
     <meta
       name="description"
-      content="Leon Azdajic — Business Information Systems student at Daimler Truck. Business analysis, data analytics and AI-assisted process automation. Available for roles in Southeast Asia from November 2027."
+      content="Leon Azdajic — Business Information Systems student at Daimler Truck. Business analysis, data analytics and AI-assisted process automation. Open to international roles from November 2027."
     />
     <meta name="author" content="Leon Azdajic" />
-    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="theme-color" content="#0d1321" />
+    <meta name="color-scheme" content="light" />
     <meta name="referrer" content="no-referrer" />
 
     <!-- Social link previews: keep URLs absolute for external crawlers. -->
@@ -24,7 +25,7 @@
       property="og:description"
       content="Explore my work in business analysis, process automation and AI-assisted development, including ApiCon at Daimler Truck and an independent rental management platform."
     />
-    <meta property="og:image" content="https://leonazdajic.github.io/social/portfolio-preview.png" />
+    <meta property="og:image" content="https://leonazdajic.github.io/social/portfolio-preview-v3.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -32,897 +33,776 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Leon Azdajic — Portfolio &amp; Project Case Studies" />
     <meta name="twitter:description" content="Business analysis, process automation and AI-assisted development. Explore my project case studies." />
-    <meta name="twitter:image" content="https://leonazdajic.github.io/social/portfolio-preview.png" />
+    <meta name="twitter:image" content="https://leonazdajic.github.io/social/portfolio-preview-v3.png" />
     <meta name="twitter:image:alt" content="Portfolio of Leon Azdajic, featuring ApiCon master data validation and a rental management platform." />
 
     <!-- Fonts are self-hosted via Fontsource (see src/main.ts) — no external
          requests, GDPR-friendly. -->
   </head>
   <body>
-    <!-- Subtle animated tech background (grid + glow), drawn on canvas -->
-    <canvas id="bg-canvas" aria-hidden="true"></canvas>
-    <div class="bg-vignette" aria-hidden="true"></div>
-
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- ============================= NAV ============================= -->
     <header class="nav" id="nav">
-      <a href="#hero" class="nav__brand" aria-label="Home — Leon Azdajic">
-        <span class="nav__brand-mark">LA</span>
-        <span class="nav__brand-name">Leon Azdajic</span>
-      </a>
-      <nav class="nav__links" aria-label="Section navigation">
-        <a href="#profile" class="nav__link">Profile</a>
-        <a href="#experience" class="nav__link">Experience</a>
-        <a href="#project" class="nav__link">Projects</a>
-        <a href="#education" class="nav__link">Education</a>
-        <a href="#skills" class="nav__link">Skills</a>
-        <a href="#awards" class="nav__link">Awards</a>
-        <a href="#beyond" class="nav__link">Beyond</a>
-        <a href="#contact" class="nav__link nav__link--cta">Contact</a>
-      </nav>
-      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__inner container">
+        <a href="#top" class="nav__brand" translate="no">Leon Azdajic</a>
+        <button class="nav__toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav__links" id="nav-links" aria-label="Section navigation">
+          <a href="#profile" class="nav__link">Profile</a>
+          <a href="#experience" class="nav__link">Experience</a>
+          <a href="#projects" class="nav__link">Projects</a>
+          <a href="#education" class="nav__link">Education</a>
+          <a href="#skills" class="nav__link">Skills</a>
+          <a href="#contact" class="nav__link">Contact</a>
+          <a class="nav__cv" href="/cv/leon-azdajic-cv.pdf" download data-cv>CV <span aria-hidden="true">↓</span><span class="visually-hidden"> (PDF)</span></a>
+        </nav>
+      </div>
+      <div class="nav__progress" aria-hidden="true"><span data-progress></span></div>
     </header>
 
     <main id="main">
-      <!-- ============================= HERO ============================= -->
-      <section class="hero" id="hero">
-        <div class="hero__inner">
-          <div class="hero__content">
-            <p class="hero__eyebrow reveal">
-              <span class="hero__pulse" aria-hidden="true"></span>
-              Daimler Truck · Work-Study Programme
+      <!-- ============================= HERO (ink band) ============================= -->
+      <section class="hero" id="top" aria-labelledby="hero-name">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <div class="hero__text">
+            <p class="hero__kicker mono" translate="no"><span>Stuttgart, Germany</span><span class="hero__sep" aria-hidden="true"> · </span><span>open to roles from Nov 2027</span></p>
+            <div class="hero__id">
+              <img
+                class="hero__photo"
+                src="/photo/leon-azdajic-192.webp"
+                srcset="/photo/leon-azdajic-192.webp 192w, /photo/leon-azdajic-384.webp 384w"
+                sizes="(max-width: 600px) 64px, 88px"
+                width="192"
+                height="192"
+                alt="Portrait of Leon Azdajic"
+                fetchpriority="high"
+              />
+              <h1 class="hero__name" id="hero-name" translate="no">Leon Azdajic</h1>
+            </div>
+            <p class="hero__role">
+              Business analyst who also builds the tools — turning manual processes
+              into software that teams actually use.
             </p>
-            <h1 class="hero__name reveal">Leon Azdajic</h1>
-            <p class="hero__role reveal">
-              Business Analysis &amp; Process Automation
-              <span class="hero__role-sub">B.Sc. student · Business Information Systems · DHBW Stuttgart</span>
-            </p>
-            <p class="hero__tagline reveal">
-              I use <span class="accent">AI to build business tools</span> that teams rely on
-              in daily operations — from automated data validation to pricing simulations
-              that support market decisions.
-            </p>
-            <p class="hero__availability reveal">
-              Open to roles in Southeast Asia from <strong>November 2027</strong>
-            </p>
-            <div class="hero__actions reveal">
-              <a href="#project" class="btn btn--primary">Explore my projects</a>
-              <a href="#experience" class="btn btn--ghost">View experience</a>
+
+            <ul class="hero__figures" aria-label="Selected results">
+              <li><span class="hero__figure mono" translate="no">&gt;90%</span> less manual effort per validation cycle</li>
+              <li><span class="hero__figure mono" translate="no">~33,000</span> customer contracts in a pricing simulation</li>
+              <li><span class="hero__figure mono" translate="no">25</span> European markets validated automatically</li>
+            </ul>
+
+            <div class="hero__actions">
+              <a class="btn btn--light" href="#contact">Get in touch</a>
+              <!-- CV links (data-cv) are stripped by vite.config.ts while
+                   public/cv/leon-azdajic-cv.pdf is missing. Do not use the name
+                   Leon_Azdajic_CV*.pdf — that pattern is gitignored. -->
+              <a class="btn btn--line" href="/cv/leon-azdajic-cv.pdf" download data-cv>Download CV <span class="btn__note">PDF</span></a>
+              <a class="hero__link" href="#work">See my work ↓</a>
+              <a class="hero__link" href="https://www.linkedin.com/in/leon-azdajic/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
             </div>
           </div>
 
-          <!-- Featured project teasers — link to the full case studies below -->
-          <div class="hero__projects">
-            <a
-              class="hero__card reveal"
-              href="#project"
-              aria-label="Featured project: ApiCon, automated master data validation — view details"
-            >
-              <span class="hero__card-eyebrow">
-                <span class="hero__card-dot" aria-hidden="true"></span>
-                Featured Project
-              </span>
-              <img
-                class="hero__card-img"
-                src="/apicon/step-5-results.webp"
-                alt="Preview of the ApiCon master data validation tool showing validation results"
-                width="1762" height="936"
-              />
-              <span class="hero__card-title">ApiCon — Master Data Validation</span>
-              <span class="hero__card-sub">
-                ~90% less validation time · 15 users in Germany and India
-              </span>
-              <span class="hero__card-cta">
-                View project
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </span>
-            </a>
+          <dl class="spec" aria-label="Profile at a glance">
+            <div class="spec__head mono" translate="no"><span>profile</span><span>at a glance</span></div>
+            <div class="spec__row"><dt class="mono" translate="no">focus</dt><dd>Business Analysis &amp; Process Automation</dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">current</dt><dd><strong translate="no">Daimler Truck AG</strong><span class="spec__sub">Work-study programme since Oct 2024</span></dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">degree</dt><dd>B.Sc. Business Information Systems<span class="spec__sub">DHBW Stuttgart · graduating Oct 2027</span></dd></div>
+            <div class="spec__row spec__row--extra"><dt class="mono" translate="no">worked in</dt><dd>Germany · Brazil · with teams in India</dd></div>
+            <div class="spec__row spec__row--extra"><dt class="mono" translate="no">tools</dt><dd translate="no">Python · SQL · Power BI · Excel · Flask</dd></div>
+            <div class="spec__row spec__row--extra"><dt class="mono" translate="no">ai tools</dt><dd translate="no">Claude Code · Codex · M365 Copilot</dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">languages</dt><dd>German · Croatian/Serbian · English<span class="spec__sub">native · native · C1</span></dd></div>
+          </dl>
+        </div>
 
-            <a
-              class="hero__card reveal"
-              href="#rental-project"
-              aria-label="Featured project: Apartment Rental Platform — view details"
-            >
-              <span class="hero__card-eyebrow">
-                <span class="hero__card-dot" aria-hidden="true"></span>
-                Featured Project
-              </span>
-              <img
-                class="hero__card-img"
-                src="/rental/slide-2-dashboard.webp"
-                alt="Preview of the Apartment Rental Platform management dashboard"
-                width="1760" height="929" loading="lazy"
-              />
-              <span class="hero__card-title">Apartment Rental Platform</span>
-              <span class="hero__card-sub">
-                From enquiry to move-out · development complete, launch pending
-              </span>
-              <span class="hero__card-cta">
-                View project
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </span>
-            </a>
+        <!-- Credentials: recognisable names, as plain text (no third-party logos) -->
+        <div class="container">
+          <div class="hero__proof">
+            <p class="hero__proof-label mono">Experience &amp; education</p>
+            <ul class="hero__proof-list" translate="no">
+              <li>Daimler Truck</li>
+              <li>Mercedes-Benz Trucks</li>
+              <li>Mercedes-Benz do Brasil</li>
+              <li>DHBW Stuttgart</li>
+              <li>Mahidol University</li>
+            </ul>
           </div>
         </div>
-        <a href="#profile" class="hero__scroll" aria-label="Scroll to content">
-          <span class="hero__scroll-line"></span>
-        </a>
       </section>
 
       <!-- ============================= PROFILE ============================= -->
       <section class="section" id="profile" aria-labelledby="profile-title">
-        <div class="section__head reveal">
-          <span class="section__index">01</span>
-          <h2 class="section__title" id="profile-title">Profile</h2>
-        </div>
-        <div class="profile__text reveal">
-          <p>
-            I work where business and IT meet: on manual processes, inconsistent data and
-            decisions that need structure. In Daimler Truck’s three-year work-study
-            programme, I have worked in data analytics, process automation and portfolio
-            management in Germany and Brazil, collaborating closely with colleagues in India.
-          </p>
-          <p>
-            I take ownership of requirements and business logic, build with AI coding agents
-            such as Claude Code and Codex, and use enterprise Copilot for analysis. I have also
-            introduced two teams to working with AI. Following an exchange semester in
-            Bangkok, I plan to build my career in Southeast Asia after graduating in
-            October 2027.
-          </p>
+        <div class="container">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="eyebrow mono">01 / profile</p>
+              <h2 class="section__title" id="profile-title">Where business and IT meet</h2>
+            </div>
+            <p class="section__intro">
+              Three years in Daimler Truck’s work-study programme, in Germany and Brazil.
+              I own the requirements and business logic — and build the tools myself with
+              AI coding agents.
+            </p>
+          </header>
+
+          <!-- What I do: four capabilities, each backed by one result on this page -->
+          <ul class="skillset" aria-label="What I do">
+            <li class="skillset__item">
+              <h3 class="skillset__title">Process analysis</h3>
+              <p class="skillset__text">Clear requirements, owners and decision logic.</p>
+              <a class="skillset__proof" href="#st-brazil">
+                <span class="skillset__figure mono" translate="no">3-phase tracker</span>
+                <span>for decision readiness</span>
+              </a>
+            </li>
+            <li class="skillset__item">
+              <h3 class="skillset__title">Data &amp; analytics</h3>
+              <p class="skillset__text">SQL, Excel and Power BI for management decisions.</p>
+              <a class="skillset__proof" href="#st-digital">
+                <span class="skillset__figure mono" translate="no">~33,000</span>
+                <span>contracts in a pricing simulation</span>
+              </a>
+            </li>
+            <li class="skillset__item skillset__item--key">
+              <h3 class="skillset__title">Process automation</h3>
+              <p class="skillset__text">From manual checks to tools in daily use.</p>
+              <a class="skillset__proof" href="#apicon">
+                <span class="skillset__figure mono" translate="no">~27 h → ~1⁠–⁠1.5 h</span>
+                <span>per validation cycle</span>
+              </a>
+            </li>
+            <li class="skillset__item">
+              <h3 class="skillset__title">AI enablement</h3>
+              <p class="skillset__text">AI tools and assistants for everyday work.</p>
+              <a class="skillset__proof" href="#st-market">
+                <span class="skillset__figure mono" translate="no">2 teams</span>
+                <span>introduced to working with AI</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Selected work: entry points into the case studies below -->
+          <p class="subhead mono" id="work">selected work</p>
+          <div class="work">
+            <a class="work-card" href="#apicon">
+              <div class="frame">
+                <div class="frame__bar" aria-hidden="true">
+                  <span class="frame__dots"><i></i><i></i><i></i></span>
+                  <span class="frame__title mono" translate="no">apicon · results</span>
+                </div>
+                <div class="frame__media">
+                  <img src="/apicon/apicon-05-results.webp" alt="" width="1762" height="936" />
+                </div>
+              </div>
+              <div class="work-card__body">
+                <p class="work-card__meta mono">Daimler Truck · internal tool · 2026</p>
+                <h3 class="work-card__title">ApiCon — Master Data Validation</h3>
+                <p class="work-card__text">Automated master data checks for 25 European markets — from ~27 h to ~1⁠–⁠1.5 h per cycle.</p>
+                <span class="work-card__cta">Case study &amp; interactive demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+
+            <a class="work-card" href="#rental">
+              <div class="frame">
+                <div class="frame__bar" aria-hidden="true">
+                  <span class="frame__dots"><i></i><i></i><i></i></span>
+                  <span class="frame__title mono" translate="no">rental admin · occupancy</span>
+                </div>
+                <div class="frame__media">
+                  <img src="/rental/slide-4-calendar.webp" alt="" width="1760" height="929" loading="lazy" />
+                </div>
+              </div>
+              <div class="work-card__body">
+                <p class="work-card__meta mono">Independent project · full-stack · 2026</p>
+                <h3 class="work-card__title">Apartment Rental Platform</h3>
+                <p class="work-card__text">One workflow from enquiry to move-out, with double-booking protection and ~700 automated tests.</p>
+                <span class="work-card__cta">Read the case study <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
       <!-- ============================= EXPERIENCE ============================= -->
       <section class="section" id="experience" aria-labelledby="experience-title">
-        <div class="section__head reveal">
-          <span class="section__index">02</span>
-          <h2 class="section__title" id="experience-title">Experience</h2>
-        </div>
-
-        <article class="company reveal">
-          <header class="company__head">
+        <div class="container">
+          <header class="section__head section__head--row">
             <div>
-              <h3 class="company__name">Daimler Truck AG</h3>
-              <p class="company__meta">Business Information Systems Student · Work-Study Programme</p>
+              <p class="eyebrow mono">02 / experience</p>
+              <h2 class="section__title" id="experience-title">Three years, four rotations, three countries</h2>
             </div>
-            <span class="company__period">Oct 2024 — Present</span>
+            <p class="section__intro">
+              Daimler Truck AG · work-study programme since Oct 2024. Study phases at DHBW
+              Stuttgart alternate with rotations across the company.
+            </p>
           </header>
-          <p class="company__desc">
-            Three-year programme combining a B.Sc. at DHBW Stuttgart with practical rotations
-            across Daimler Truck in Germany and Brazil. Expected graduation: October 2027.
-          </p>
-          <ol class="stations">
-            <li class="station reveal">
-              <div class="station__node" aria-hidden="true"></div>
-              <div class="station__body">
-                <div class="station__head">
-                  <h4 class="station__role">
-                    Powertrain Portfolio Management
-                    <span class="station__team">Mercedes-Benz do Brasil · São Paulo, Brazil</span>
-                  </h4>
-                  <span class="station__period">Aug 2026 — Present</span>
-                </div>
-                <ul class="station__points">
-                  <li>Built a <strong>32-item tracker</strong> covering deliverables, owners and timelines for a powertrain portfolio decision, using enterprise Copilot to analyse and structure the supporting documents.</li>
-                  <li>Presented the tracker to team leads and deliverable owners, clarifying open requirements ahead of the decision and follow-up actions after approval.</li>
-                </ul>
-                <ul class="tags tags--inline" aria-label="Skills used">
-                  <li>Portfolio Management</li>
-                  <li>Business Analysis</li>
-                  <li>Microsoft 365 Copilot</li>
-                  <li>Stakeholder Management</li>
-                </ul>
-              </div>
-            </li>
 
-            <li class="station reveal">
-              <div class="station__node" aria-hidden="true"></div>
-              <div class="station__body">
-                <div class="station__head">
-                  <h4 class="station__role">
-                    Digital Solutions
-                    <span class="station__team">Mercedes-Benz Trucks · Leinfelden-Echterdingen, Germany</span>
-                  </h4>
-                  <span class="station__period">May 2026 — Jul 2026</span>
-                </div>
-                <ul class="station__points">
-                  <li>Reduced master data validation time by <strong>around 90%</strong> across up to 25 European markets by building a Python tool that checks product data against a live API. <a class="station__more" href="#project">Explore ApiCon ↓</a></li>
-                  <li>Owned requirements and validation logic, developed the tool using Claude Code and Codex, and rolled it out to <strong>15 users in Germany and India</strong>.</li>
-                  <li>Modelled a pricing migration covering <strong>approximately 33,000 contracts</strong> using Excel and enterprise Copilot; delivered the simulation to 17 markets to support targeted customer discounts.</li>
-                  <li>Built Power BI dashboards integrating four API endpoints to track customer-portal adoption and feedback.</li>
-                </ul>
-                <ul class="tags tags--inline" aria-label="Skills used">
-                  <li>Business Analysis</li>
-                  <li>Requirements Engineering</li>
-                  <li>Process Automation</li>
-                  <li>Python</li>
-                  <li>Power BI</li>
-                  <li>Excel</li>
-                </ul>
-              </div>
-            </li>
+          <!-- Journey: Oct 2024 – Oct 2027 on a 37-month grid -->
+          <figure class="journey" aria-labelledby="journey-caption">
+            <figcaption class="visually-hidden" id="journey-caption">
+              Timeline of the work-study programme from October 2024 to October 2027.
+            </figcaption>
+            <div class="journey__chart" aria-hidden="true">
+              <span class="journey__year journey__year--2025 mono">2025</span>
+              <span class="journey__year journey__year--2026 mono">2026</span>
+              <span class="journey__year journey__year--2027 mono">2027</span>
+              <span class="journey__track"></span>
+              <span class="journey__seg journey__seg--pmo mono">1</span>
+              <span class="journey__seg journey__seg--market mono">2</span>
+              <span class="journey__seg journey__seg--exchange mono">EX</span>
+              <span class="journey__seg journey__seg--digital mono">3</span>
+              <span class="journey__seg journey__seg--brazil mono">4</span>
+              <span class="journey__today mono">today</span>
+              <span class="journey__grad mono">B.Sc.</span>
+            </div>
+            <ol class="journey__legend">
+              <li><a href="#st-pmo"><span class="journey__num mono">1</span><span><strong>IT Infrastructure PMO</strong><span class="journey__meta mono">Jan–Mar 2025 · Germany</span></span></a></li>
+              <li><a href="#st-market"><span class="journey__num mono">2</span><span><strong>Market Research</strong><span class="journey__meta mono">Jun–Aug 2025 · Germany</span></span></a></li>
+              <li><a href="#education"><span class="journey__num journey__num--exchange mono">EX</span><span><strong>Exchange semester</strong><span class="journey__meta mono">Jan–Apr 2026 · Thailand</span></span></a></li>
+              <li><a href="#st-digital"><span class="journey__num mono">3</span><span><strong>Digital Solutions</strong><span class="journey__meta mono">May–Jul 2026 · Germany</span></span></a></li>
+              <li><a href="#st-brazil"><span class="journey__num mono">4</span><span><strong>Portfolio Management</strong><span class="journey__meta mono">Aug–Nov 2026 · Brazil</span></span></a></li>
+            </ol>
+          </figure>
 
-            <li class="station reveal">
-              <div class="station__node" aria-hidden="true"></div>
-              <div class="station__body">
-                <div class="station__head">
-                  <h4 class="station__role">
-                    Market Research &amp; Segment Strategy
-                    <span class="station__team">Mercedes-Benz Trucks · Leinfelden-Echterdingen, Germany</span>
-                  </h4>
-                  <span class="station__period">Jun 2025 — Aug 2025</span>
-                </div>
-                <ul class="station__points">
-                  <li>Analysed approximately <strong>19,800 used-truck listings</strong> using SQL and Power BI to identify market and segment patterns.</li>
-                  <li>Configured an LLM-based analytics agent that enabled around five team members to explore the data through natural-language queries.</li>
-                  <li>Delivered an <strong>introductory AI workshop for two teams</strong>, covering practical prompting, file analysis, hallucinations and agents.</li>
-                </ul>
-                <ul class="tags tags--inline" aria-label="Skills used">
-                  <li>SQL</li>
-                  <li>Power BI</li>
-                  <li>Data Analytics</li>
-                  <li>Generative AI</li>
-                  <li>Market Research</li>
+          <!-- Stations: two key results visible, the rest on demand -->
+          <div class="stations">
+            <article class="station" id="st-brazil">
+              <p class="station__when mono">Aug 2026 – Nov 2026<span class="station__where">São Paulo, Brazil</span></p>
+              <div class="station__main">
+                <h3 class="station__role">Powertrain Portfolio Management</h3>
+                <p class="station__team">Mercedes-Benz do Brasil</p>
+                <ul class="points station__points">
+                  <li>Built a three-phase <strong>deliverable tracker</strong> that became the team lead’s working file for decision readiness.</li>
+                  <li>Mapped deliverables, owners and timelines for a portfolio decision; structured source documents with Microsoft 365 Copilot.</li>
                 </ul>
               </div>
-            </li>
+            </article>
 
-            <li class="station reveal">
-              <div class="station__node" aria-hidden="true"></div>
-              <div class="station__body">
-                <div class="station__head">
-                  <h4 class="station__role">
-                    IT Infrastructure PMO
-                    <span class="station__team">Daimler Truck AG · Leinfelden-Echterdingen, Germany</span>
-                  </h4>
-                  <span class="station__period">Jan 2025 — Mar 2025</span>
-                </div>
-                <ul class="station__points">
-                  <li>Supported the project management office during the separation of Daimler Truck’s IT infrastructure from Mercedes-Benz, covering cloud, server and core IT systems.</li>
-                  <li>Tracked milestones, prepared weekly steering updates and consolidated provider meeting reports to keep project documentation current.</li>
+            <article class="station" id="st-digital">
+              <p class="station__when mono">May 2026 – Jul 2026<span class="station__where">Stuttgart area, Germany</span></p>
+              <div class="station__main">
+                <h3 class="station__role">Digital Solutions</h3>
+                <p class="station__team">Mercedes-Benz Trucks</p>
+                <ul class="points station__points">
+                  <li>Cut validation effort from <strong>~27 h to ~1⁠–⁠1.5 h</strong> per cycle with ApiCon, a Python/Flask tool for 25 European markets. <a class="inline-link" href="#apicon">Case study ↓</a></li>
+                  <li>Simulated a pricing migration for <strong>~33,000 customer contracts</strong>; 17 markets use the model for targeted discounts.</li>
                 </ul>
-                <ul class="tags tags--inline" aria-label="Skills used">
-                  <li>Project Coordination</li>
-                  <li>Project Management Office (PMO)</li>
-                  <li>Project Documentation</li>
+                <details class="station__more">
+                  <summary class="station__more-toggle mono">+ 2 more</summary>
+                  <ul class="points station__points">
+                    <li>Gathered requirements with business and data teams; rolled ApiCon out to 15 users after a security check and handed it over to the data team in India.</li>
+                    <li>Analysed usage data of an internal customer portal (Userlane API, Power Query, Power BI) and presented it as an approach to measuring the tool’s success.</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="station" id="st-market">
+              <p class="station__when mono">Jun 2025 – Aug 2025<span class="station__where">Stuttgart area, Germany</span></p>
+              <div class="station__main">
+                <h3 class="station__role">Market Research &amp; Segment Strategy</h3>
+                <p class="station__team">Mercedes-Benz Trucks</p>
+                <ul class="points station__points">
+                  <li>Cleaned <strong>~19,800 used-truck listings</strong> with SQL and analysed them in 4 Power BI dashboards.</li>
+                  <li>Ran an <strong>AI enablement workshop for 2 teams</strong> at the launch of the internal AI platform.</li>
+                </ul>
+                <details class="station__more">
+                  <summary class="station__more-toggle mono">+ 1 more</summary>
+                  <ul class="points station__points">
+                    <li>Set up an AI assistant on the company’s LLM platform that lets ~5 colleagues query the data in plain language, without SQL.</li>
+                  </ul>
+                </details>
+              </div>
+            </article>
+
+            <article class="station" id="st-pmo">
+              <p class="station__when mono">Jan 2025 – Mar 2025<span class="station__where">Stuttgart area, Germany</span></p>
+              <div class="station__main">
+                <h3 class="station__role">IT Infrastructure PMO</h3>
+                <p class="station__team">Daimler Truck AG</p>
+                <ul class="points station__points">
+                  <li>Supported the project office separating Daimler Truck’s IT infrastructure (cloud, servers, core systems) from Mercedes-Benz.</li>
+                  <li>Tracked milestones, prepared weekly steering updates and consolidated provider reports.</li>
                 </ul>
               </div>
-            </li>
-          </ol>
-        </article>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <!-- ============================= FEATURED PROJECTS ============================= -->
-      <section class="section" id="project" aria-labelledby="project-title">
-        <div class="section__head reveal">
-          <span class="section__index">03</span>
-          <h2 class="section__title" id="project-title">Featured Projects</h2>
+      <!-- ============================= PROJECTS ============================= -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="eyebrow mono">03 / case studies</p>
+              <h2 class="section__title" id="projects-title">Two projects, built end to end</h2>
+            </div>
+            <p class="section__intro">
+              Problem, solution and result for both projects — with real screenshots. Confidential
+              data is blurred.
+            </p>
+          </header>
+
+          <!-- ApiCon -->
+          <article class="case" id="apicon" aria-labelledby="apicon-title">
+            <header class="case__head">
+              <div>
+                <p class="case__context mono">Daimler Truck · Digital Solutions, Mercedes-Benz Trucks</p>
+                <h3 class="case__title" id="apicon-title">ApiCon — Master Data Validation</h3>
+                <p class="case__status">In use · handed over Aug 2026</p>
+              </div>
+              <p class="case__lead">Automated product master data validation across 25 European markets.</p>
+            </header>
+
+            <div class="case__body">
+              <div class="case__text">
+                <div class="case__story">
+                  <div>
+                    <h4 class="case__label mono">problem</h4>
+                    <p>
+                      Prices and product names for 25 markets were checked by hand against an
+                      Excel reference — about 27 hours per cycle, resting on a few people.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="case__label mono">solution</h4>
+                    <p>
+                      I gathered the requirements with business and data teams and built a
+                      Python/Flask tool that compares every field with the live system and ranks
+                      deviations by business impact.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="case__label mono">result</h4>
+                    <p>
+                      ~1⁠–⁠1.5 hours per cycle. After a security check it went to 15 users and the
+                      data team in India; the first run found errors that manual checks had missed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="case__visual">
+                <div class="slider frame" id="apicon-slider">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dots"><i></i><i></i><i></i></span>
+                    <span class="frame__title mono" translate="no">apicon · screenshots · sensitive data blurred</span>
+                  </div>
+                  <div
+                    class="slider__viewport"
+                    tabindex="0"
+                    role="group"
+                    aria-roledescription="carousel"
+                    aria-label="ApiCon application screenshots — use arrow keys to browse"
+                  >
+                    <ul class="slider__track">
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/validation-flow.svg" alt="ApiCon workflow in four steps: upload Excel reference data, fetch live product API values for 25 European markets, compare field by field and classify deviations by business impact, produce an Excel review report with run history." width="640" height="400" loading="lazy" draggable="false" class="slider__img--diagram" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">00</span>Overview — how a validation cycle works, end to end</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-01-environment.webp" alt="ApiCon wizard step: selecting the target environment, staging or production" width="1759" height="934" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">01</span>Guided setup — selecting the target environment (staging or production)</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-02-markets.webp" alt="ApiCon wizard step: selecting European markets to validate, with presets" width="1762" height="936" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">02</span>Market selection — up to 25 European markets via presets or a custom selection</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-03-files.webp" alt="ApiCon wizard step: uploading the Excel master data file as reference source" width="1780" height="945" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">03</span>Reference upload — the Excel master data serves as the single source of truth</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-04-comparison.webp" alt="ApiCon comparison in progress: markets validated in parallel against the live API" width="1788" height="949" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">04</span>Parallel validation — each market is checked against the live product API</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-05-results.webp" alt="ApiCon results overview: deviations counted and broken down by severity" width="1762" height="936" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">05</span>Results overview — every deviation counted and classified by severity</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/apicon/apicon-06-delta.webp" alt="ApiCon delta view: comparison to the previous run showing new, open and fixed deviations" width="1773" height="941" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">06</span>Delta view — new, open and resolved deviations compared with the previous run</figcaption>
+                        </figure>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="slider__controls">
+                    <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" /></svg>
+                    </button>
+                    <div class="slider__dots" data-slider-dots></div>
+                    <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="case__figures" aria-label="ApiCon results">
+              <li><span class="case__value mono" translate="no">~27 h → ~1⁠–⁠1.5 h</span><span class="case__caption">per validation cycle (&gt;90% less effort)</span></li>
+              <li><span class="case__value mono" translate="no">25</span><span class="case__caption">European markets checked automatically</span></li>
+              <li><span class="case__value mono" translate="no">15</span><span class="case__caption">users after a security check and rollout</span></li>
+            </ul>
+
+            <!-- Interactive demo (src/modules/demo.ts) -->
+            <!-- Collapsed by default; opening it starts a run (src/modules/demo.ts) -->
+            <details class="demo frame" data-demo>
+              <summary class="demo__teaser">
+                <span class="demo__teaser-text">
+                  <span class="demo__teaser-title">Interactive demo: a simulated validation run</span>
+                  <span class="demo__teaser-sub">Six sample markets, checked in parallel · illustrative data only</span>
+                </span>
+                <span class="demo__teaser-cta mono" aria-hidden="true"><span class="demo__cta-open">Run demo →</span><span class="demo__cta-close">Hide</span></span>
+              </summary>
+
+              <div class="demo__top">
+                <p class="demo__intro">
+                  Each market is compared field by field with the reference, and every deviation
+                  is ranked by business impact. No real product or market data.
+                </p>
+                <ul class="demo__stats" aria-label="Run summary">
+                  <li><span class="demo__stat mono" data-stat="markets">0/6</span><span class="demo__stat-label">markets checked</span></li>
+                  <li><span class="demo__stat mono" data-stat="deviations">0</span><span class="demo__stat-label">deviations</span></li>
+                  <li><span class="demo__stat demo__stat--critical mono" data-stat="critical">0</span><span class="demo__stat-label">critical</span></li>
+                  <li><span class="demo__stat mono" data-stat="time">0.0 s</span><span class="demo__stat-label">run time</span></li>
+                </ul>
+                <button type="button" class="btn btn--ink demo__run" data-demo-run>Run validation</button>
+              </div>
+
+              <div class="demo__table-wrap">
+                <table class="demo__table">
+                  <caption class="visually-hidden">Validation status per market</caption>
+                  <thead>
+                    <tr><th scope="col">Market</th><th scope="col">Status</th><th scope="col" class="demo__col-progress">Progress</th><th scope="col">Critical</th><th scope="col">Warning</th><th scope="col">Cosmetic</th></tr>
+                  </thead>
+                  <tbody data-demo-markets></tbody>
+                </table>
+              </div>
+
+              <div class="demo__deviations" data-demo-deviations hidden>
+                <h4 class="demo__subtitle mono" data-demo-subtitle>deviations · ranked by impact</h4>
+                <div class="demo__table-wrap">
+                  <table class="demo__table">
+                    <caption class="visually-hidden">Sample deviations ranked by business impact</caption>
+                    <thead>
+                      <tr><th scope="col">Severity</th><th scope="col">Market</th><th scope="col">Item</th><th scope="col">Field</th><th scope="col">Reference</th><th scope="col">API</th></tr>
+                    </thead>
+                    <tbody data-demo-rows></tbody>
+                  </table>
+                </div>
+              </div>
+
+              <p class="demo__status mono" data-demo-status aria-live="polite">Ready. 6 markets queued.</p>
+            </details>
+
+            <div class="case__foot">
+              <ul class="tags mono" translate="no" aria-label="Technologies"><li>python</li><li>flask</li><li>rest api</li><li>sqlite</li><li>pandas</li><li>pytest</li></ul>
+              <p class="case__stack">
+                Built with Claude Code and Codex. Also the subject of my second project thesis
+                at DHBW Stuttgart.
+              </p>
+            </div>
+          </article>
+
+          <!-- Rental platform -->
+          <article class="case" id="rental" aria-labelledby="rental-title">
+            <header class="case__head">
+              <div>
+                <p class="case__context mono">Independent full-stack project · Rental operations</p>
+                <h3 class="case__title" id="rental-title">Apartment Rental Platform</h3>
+                <p class="case__status">Completed · launch pending</p>
+              </div>
+              <p class="case__lead">One workflow for rental enquiries, reservations, contracts and move-out.</p>
+            </header>
+
+            <div class="case__body">
+              <div class="case__text">
+                <div class="case__story case__story--two">
+                  <div>
+                    <h4 class="case__label mono">problem</h4>
+                    <p>
+                      A private landlord with eight apartments and a seven-room shared flat needed
+                      one place to manage availability, enquiries, documents and deadlines.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 class="case__label mono">solution</h4>
+                    <p>
+                      I built the public website and the management dashboard with AI coding
+                      agents (Python, Django, PostgreSQL). Development is complete; launch is
+                      pending.
+                    </p>
+                  </div>
+                </div>
+                <div class="case__steps">
+                  <h4 class="case__label mono">from enquiry to move-out</h4>
+                  <ol>
+                    <li>The enquiry checks availability and blocks double bookings.</li>
+                    <li>Preliminary approval holds the apartment for five days and requests documents.</li>
+                    <li>The dashboard guides review, acceptance and every follow-up step.</li>
+                    <li>Scheduled jobs send emails, track deadlines and delete data under the retention rules.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="case__visual">
+                <div class="slider frame" id="rental-slider">
+                  <div class="frame__bar" aria-hidden="true">
+                    <span class="frame__dots"><i></i><i></i><i></i></span>
+                    <span class="frame__title mono" translate="no">rental admin · screenshots</span>
+                  </div>
+                  <div
+                    class="slider__viewport"
+                    tabindex="0"
+                    role="group"
+                    aria-roledescription="carousel"
+                    aria-label="Apartment Rental Platform screenshots — use arrow keys to browse"
+                  >
+                    <ul class="slider__track">
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-1-inquiry.webp" alt="Public apartment enquiry form with a validated rental period and price preview" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">01</span>Guided enquiry — live availability, server-side validation and a clear price preview</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-2-dashboard.webp" alt="Rental management dashboard with key metrics, open enquiries and reminders" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">02</span>Operational overview — priorities, active holds and deadlines in one place</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-3-workflow.webp" alt="Enquiry detail view with applicant data, document status and workflow actions" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">03</span>Structured case handling — every applicant, document and next action connected</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-4-calendar.webp" alt="Monthly occupancy calendar showing free, reserved and occupied apartments" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">04</span>Conflict-free planning — bookings, reservations and blocks in one calendar</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-5-emails.webp" alt="Transactional email log with delivery status and retry actions" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">05</span>Automated communication — delivery status, retries and full context retained</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-6-reports.webp" alt="Rental reporting dashboard with revenue, occupancy and conversion metrics" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">06</span>Business reporting — revenue, occupancy and conversion derived from booking records</figcaption>
+                        </figure>
+                      </li>
+                      <li class="slider__slide">
+                        <figure class="slider__figure">
+                          <img src="/rental/slide-7-audit.webp" alt="Append-only audit trail of administrative and automated system actions" width="1760" height="929" loading="lazy" draggable="false" />
+                          <figcaption class="slider__caption"><span class="slider__caption-num mono">07</span>Audit trail — critical administrator and system actions remain traceable</figcaption>
+                        </figure>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="slider__controls">
+                    <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" /></svg>
+                    </button>
+                    <div class="slider__dots" data-slider-dots></div>
+                    <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="case__figures" aria-label="Rental platform scope">
+              <li><span class="case__value mono" translate="no">8</span><span class="case__caption">apartments plus a seven-room shared flat</span></li>
+              <li><span class="case__value mono" translate="no">~700</span><span class="case__caption">automated tests, incl. double-booking protection</span></li>
+              <li><span class="case__value mono" translate="no">2FA</span><span class="case__caption">two-factor login for administrators</span></li>
+            </ul>
+
+            <div class="case__foot">
+              <ul class="tags mono" translate="no" aria-label="Technologies"><li>python</li><li>django</li><li>postgresql</li><li>html &amp; css</li><li>pytest</li><li>2fa / totp</li></ul>
+              <p class="case__stack">
+                Double bookings are blocked at database level; an audit trail records every
+                administrative action.
+              </p>
+            </div>
+          </article>
         </div>
-
-        <article class="project reveal">
-          <header class="project__head">
-            <div>
-              <p class="project__eyebrow">Daimler Truck AG · Digital Solutions, Mercedes-Benz Trucks</p>
-              <h3 class="project__name">ApiCon — Master Data Validation</h3>
-              <p class="project__tagline">
-                Automated product data validation across up to 25 European markets.
-              </p>
-            </div>
-            <span class="project__badge">
-              <span class="project__badge-dot" aria-hidden="true"></span>
-              In production use
-            </span>
-          </header>
-
-          <div class="project__story">
-            <p>
-              <strong>The problem.</strong> Before each market rollout, product data for digital
-              truck services had to be checked manually against an Excel reference. This took
-              roughly an hour per market and depended on a single person at headquarters.
-            </p>
-            <p>
-              <strong>My contribution.</strong> I owned the requirements and scoring logic,
-              co-designed the architecture with AI coding agents and developed a Python/Flask
-              application, which I rolled out to 15 users. It compares reference and API values,
-              classifies deviations by business impact and generates an Excel report for review
-              and correction.
-            </p>
-          </div>
-
-          <ul class="project__stats" aria-label="ApiCon results and scope">
-            <li class="project__stat">
-              <span class="project__stat-value">~90%</span>
-              <span class="project__stat-label">less validation time compared with manual checks</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">5–8 min</span>
-              <span class="project__stat-label">per market, down from roughly 60 minutes</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">15 users</span>
-              <span class="project__stat-label">working with the tool in Germany and India</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">Up to 25</span>
-              <span class="project__stat-label">European markets supported</span>
-            </li>
-          </ul>
-
-          <!-- Screenshot slider — follows the tool's own guided workflow -->
-          <div class="slider reveal" id="project-slider">
-            <div
-              class="slider__viewport"
-              tabindex="0"
-              role="group"
-              aria-roledescription="carousel"
-              aria-label="ApiCon application screenshots — use arrow keys to browse"
-            >
-              <ul class="slider__track">
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-1-environment.webp"
-                      alt="ApiCon wizard step: selecting the target environment, staging or production"
-                      width="1759" height="934" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">01</span>
-                      Guided setup — selecting the target environment (staging or production)
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-2-markets.webp"
-                      alt="ApiCon wizard step: selecting European markets to validate, with presets"
-                      width="1762" height="936" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">02</span>
-                      Market selection — up to 25 European markets via presets or a custom selection
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-3-files.webp"
-                      alt="ApiCon wizard step: uploading the Excel master data file as reference source"
-                      width="1780" height="945" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">03</span>
-                      Reference upload — the Excel master data serves as the single source of truth
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-4-comparison.webp"
-                      alt="ApiCon comparison in progress: markets validated in parallel against the live API"
-                      width="1788" height="949" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">04</span>
-                      Parallel validation — each market is checked against the live product API
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-5-results.webp"
-                      alt="ApiCon results: deviations counted and broken down by severity"
-                      width="1762" height="936" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">05</span>
-                      Results overview — every deviation counted and classified by severity
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/apicon/step-6-delta.webp"
-                      alt="ApiCon delta view: comparison to the previous run showing new, open and fixed deviations"
-                      width="1773" height="941" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">06</span>
-                      Delta view — new, open and resolved deviations compared with the previous run
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <div class="slider__controls">
-              <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M15 5l-7 7 7 7" />
-                </svg>
-              </button>
-              <div class="slider__dots" data-slider-dots></div>
-              <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="project__how reveal">
-            <h4 class="project__subtitle">How it works</h4>
-            <ol class="project__steps">
-              <li>
-                <span class="project__step-num" aria-hidden="true">1</span>
-                Upload the Excel master data that serves as the reference source.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">2</span>
-                The tool queries the live product API for all selected markets in parallel.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">3</span>
-                Reference and API values are compared field by field; deviations are classified by business impact.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">4</span>
-                A multi-sheet Excel report supports review and correction; stored runs enable history and delta comparisons.
-              </li>
-            </ol>
-          </div>
-
-          <footer class="project__foot reveal">
-            <ul class="tags tags--inline" aria-label="Technologies used">
-              <li>Python</li>
-              <li>Flask</li>
-              <li>REST APIs</li>
-              <li>SQLite</li>
-              <li>pandas</li>
-              <li>pytest</li>
-            </ul>
-            <p class="project__note">
-              Developed with Claude Code and Codex. A separate development team in India has
-              requested the application to adapt it to its own use case. ApiCon is also the
-              subject of my Design Science Research project at DHBW Stuttgart.
-            </p>
-          </footer>
-        </article>
-
-        <article class="project project--secondary reveal" id="rental-project">
-          <header class="project__head">
-            <div>
-              <p class="project__eyebrow">Independent full-stack project · Rental operations</p>
-              <h3 class="project__name">Apartment Rental Platform</h3>
-              <p class="project__tagline">
-                One workflow for rental enquiries, reservations, contracts and move-out.
-              </p>
-            </div>
-            <span class="project__badge">
-              <span class="project__badge-dot" aria-hidden="true"></span>
-              Completed · launch pending
-            </span>
-          </header>
-
-          <div class="project__story">
-            <p>
-              <strong>The brief.</strong> A private landlord with eight apartments and a
-              seven-room shared flat needed one place to manage availability, enquiries,
-              documents and deadlines.
-            </p>
-            <p>
-              <strong>My contribution.</strong> I developed the public website and management
-              dashboard with AI coding agents, using Python, Django and PostgreSQL. The
-              application covers the entire process from availability check to move-out, with
-              double-booking protection, automated emails and around 700 automated tests.
-              Development is complete; launch is pending.
-            </p>
-          </div>
-
-          <ul class="project__stats" aria-label="Rental platform scope and validation">
-            <li class="project__stat">
-              <span class="project__stat-value">8 apartments</span>
-              <span class="project__stat-label">plus a seven-room shared flat</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">5-day holds</span>
-              <span class="project__stat-label">temporary reservations after preliminary approval</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">~700 tests</span>
-              <span class="project__stat-label">automated tests, including double-booking protection</span>
-            </li>
-            <li class="project__stat">
-              <span class="project__stat-value">2FA</span>
-              <span class="project__stat-label">two-factor authentication for administrator access</span>
-            </li>
-          </ul>
-
-          <div class="slider reveal" id="rental-slider">
-            <div
-              class="slider__viewport"
-              tabindex="0"
-              role="group"
-              aria-roledescription="carousel"
-              aria-label="Apartment Rental Platform screenshots — use arrow keys to browse"
-            >
-              <ul class="slider__track">
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-1-inquiry.webp"
-                      alt="Public apartment enquiry form with a validated rental period and price preview"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">01</span>
-                      Guided enquiry — live availability, server-side validation and a clear price preview
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-2-dashboard.webp"
-                      alt="Rental management dashboard with key metrics, open enquiries and reminders"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">02</span>
-                      Operational overview — priorities, active holds and deadlines in one place
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-3-workflow.webp"
-                      alt="Enquiry detail view with applicant data, document status and workflow actions"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">03</span>
-                      Structured case handling — every applicant, document and next action connected
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-4-calendar.webp"
-                      alt="Monthly occupancy calendar showing free, reserved and occupied apartments"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">04</span>
-                      Conflict-free planning — bookings, reservations and blocks in one calendar
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-5-emails.webp"
-                      alt="Transactional email log with delivery status and retry actions"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">05</span>
-                      Automated communication — delivery status, retries and full context retained
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-6-reports.webp"
-                      alt="Rental reporting dashboard with revenue, occupancy and conversion metrics"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">06</span>
-                      Business reporting — revenue, occupancy and conversion derived from booking records
-                    </figcaption>
-                  </figure>
-                </li>
-                <li class="slider__slide">
-                  <figure class="slider__figure">
-                    <img
-                      src="/rental/slide-7-audit.webp"
-                      alt="Append-only audit trail of administrative and automated system actions"
-                      width="1760" height="929" loading="lazy" draggable="false"
-                    />
-                    <figcaption class="slider__caption">
-                      <span class="slider__caption-num">07</span>
-                      Audit trail — critical administrator and system actions remain traceable
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <div class="slider__controls">
-              <button type="button" class="slider__arrow" data-slider-prev aria-label="Previous screenshot">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M15 5l-7 7 7 7" />
-                </svg>
-              </button>
-              <div class="slider__dots" data-slider-dots></div>
-              <button type="button" class="slider__arrow" data-slider-next aria-label="Next screenshot">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                  <path d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="project__how reveal">
-            <h4 class="project__subtitle">From enquiry to move-out</h4>
-            <ol class="project__steps">
-              <li>
-                <span class="project__step-num" aria-hidden="true">1</span>
-                A server-validated enquiry checks availability and prevents overlapping bookings.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">2</span>
-                Preliminary approval creates a five-day hold and sends the document checklist.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">3</span>
-                The dashboard guides review, acceptance, rental status and all follow-up actions.
-              </li>
-              <li>
-                <span class="project__step-num" aria-hidden="true">4</span>
-                Scheduled jobs handle emails, deadlines and data deletion according to retention rules.
-              </li>
-            </ol>
-          </div>
-
-          <footer class="project__foot reveal">
-            <ul class="tags tags--inline" aria-label="Technologies used">
-              <li>Python</li>
-              <li>Django</li>
-              <li>PostgreSQL</li>
-              <li>HTML &amp; CSS</li>
-              <li>pytest</li>
-              <li>2FA / TOTP</li>
-            </ul>
-            <p class="project__note">
-              Double-booking protection is enforced at database level. Retention rules, an
-              append-only audit trail and idempotent email processing support day-to-day
-              administration.
-            </p>
-          </footer>
-        </article>
       </section>
 
       <!-- ============================= EDUCATION ============================= -->
       <section class="section" id="education" aria-labelledby="education-title">
-        <div class="section__head reveal">
-          <span class="section__index">04</span>
-          <h2 class="section__title" id="education-title">Education</h2>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card__head">
-              <h3 class="card__title">DHBW Stuttgart — Baden-Württemberg Cooperative State University</h3>
-              <span class="card__period">Oct 2024 — Oct 2027 (expected)</span>
+        <div class="container">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="eyebrow mono">04 / education</p>
+              <h2 class="section__title" id="education-title">Education</h2>
             </div>
-            <p class="card__subtitle">
-              B.Sc. in Business Information Systems — IMBIT (International Management for Business
-              and Information Technology)
+            <p class="section__intro">
+              A dual B.Sc. that alternates study phases in Stuttgart with practical rotations —
+              plus an exchange semester in Bangkok.
             </p>
-            <p class="card__location">Stuttgart, Germany</p>
-            <ul class="card__points">
-              <li><strong>Current grade:</strong> 1.6 (German scale; 1.0 = best)</li>
-              <li>
-                <strong>Relevant coursework:</strong> Programming (Java, Python); Databases
-                (SQL); Distributed Systems; Software Lifecycle Management; Business
-                Administration; Accounting &amp; Finance; Mathematics
-              </li>
-              <li>
-                <strong>Research project:</strong> Design Science Research study on automated
-                master data validation (ApiCon), including a data quality scoring framework.
-              </li>
-            </ul>
-          </article>
+          </header>
 
-          <article class="card reveal">
-            <div class="card__head">
-              <h3 class="card__title">Mahidol University International College (MUIC)</h3>
-              <span class="card__period">Jan 2026 — Apr 2026</span>
-            </div>
-            <p class="card__subtitle">Exchange Semester in Business &amp; Technology</p>
-            <p class="card__location">Bangkok, Thailand</p>
-            <ul class="card__points">
-              <li><strong>Grade:</strong> 1.3 (converted to the German scale and recognised by DHBW; 1.0 = best)</li>
-              <li>
-                <strong>Relevant coursework:</strong> Interaction Design; International Business Management;
-                International Financial Markets; Investment &amp; Portfolio Management
-              </li>
-            </ul>
-          </article>
+          <div class="edu">
+            <article class="card edu__main">
+              <p class="card__meta mono">Oct 2024 – Oct 2027 (expected) · Stuttgart, Germany</p>
+              <h3 class="card__title">DHBW Stuttgart</h3>
+              <p class="card__sub">B.Sc. Business Information Systems (IMBIT) · Baden-Württemberg Cooperative State University</p>
+              <div class="edu__facts">
+                <div>
+                  <h4 class="card__label mono">current grade</h4>
+                  <p class="edu__grade"><strong translate="no">1.6</strong> <span>German scale, 1.0 = best</span></p>
+                </div>
+                <div>
+                  <h4 class="card__label mono">project theses</h4>
+                  <ul class="points">
+                    <li>Market analysis of the used-truck segment with SQL, Power BI and AI</li>
+                    <li>Automated validation of product master data across markets (ApiCon)</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="edu__courses"><span class="mono">coursework</span> Programming (Java, Python) · Databases (SQL) · Software Lifecycle Management · Business Administration · Accounting &amp; Finance</p>
+            </article>
 
-          <article class="card reveal">
-            <div class="card__head">
-              <h3 class="card__title">Geschwister-Scholl-Gymnasium</h3>
-              <span class="card__period">Sep 2016 — Jul 2024</span>
-            </div>
-            <p class="card__subtitle">
-              German Abitur (General University Entrance Qualification)
-            </p>
-            <p class="card__location">Stuttgart, Germany</p>
-          </article>
+            <article class="card edu__side">
+              <p class="card__meta mono">Jan 2026 – Apr 2026 · Bangkok, Thailand</p>
+              <h3 class="card__title">Mahidol University International College</h3>
+              <p class="card__sub">Exchange semester · Business &amp; Technology</p>
+              <div class="edu__facts edu__facts--single">
+                <div>
+                  <h4 class="card__label mono">grade</h4>
+                  <p class="edu__grade"><strong translate="no">1.3</strong> <span>German scale, recognised by DHBW</span></p>
+                </div>
+              </div>
+              <p class="edu__courses"><span class="mono">coursework</span> International Business Management · Interaction Design · Investment &amp; Portfolio Management</p>
+            </article>
+          </div>
+
+          <p class="edu__school"><span class="mono">2024</span> German Abitur · Geschwister-Scholl-Gymnasium, Stuttgart</p>
         </div>
       </section>
 
       <!-- ============================= SKILLS ============================= -->
       <section class="section" id="skills" aria-labelledby="skills-title">
-        <div class="section__head reveal">
-          <span class="section__index">05</span>
-          <h2 class="section__title" id="skills-title">Skills</h2>
-        </div>
-
-        <div class="skills">
-          <div class="skills__group reveal">
-            <h3 class="skills__label">Business &amp; Process</h3>
-            <ul class="tags" aria-label="Business &amp; Process skills">
-              <li>Business Analysis</li>
-              <li>Requirements Engineering</li>
-              <li>Process Automation</li>
-              <li>Digital Transformation</li>
-              <li>Stakeholder Management</li>
-              <li>Master Data Management</li>
-            </ul>
-          </div>
-
-          <div class="skills__group reveal">
-            <h3 class="skills__label">Data &amp; Analytics</h3>
-            <ul class="tags" aria-label="Data &amp; Analytics skills">
-              <li>Data Analytics</li>
-              <li>SQL</li>
-              <li>Power BI · DAX &amp; Data Modelling</li>
-              <li>Excel · Simulation Models &amp; Power Query</li>
-              <li>Data Quality Assessment</li>
-            </ul>
-          </div>
-
-          <div class="skills__group reveal">
-            <h3 class="skills__label">AI-Assisted Development</h3>
-            <ul class="tags" aria-label="AI-Assisted Development skills">
-              <li>Claude Code</li>
-              <li>OpenAI Codex</li>
-              <li>GitHub Copilot</li>
-              <li>Microsoft 365 Copilot</li>
-              <li>Prompt &amp; Context Engineering</li>
-              <li>AI Enablement &amp; Training</li>
-            </ul>
-          </div>
-
-          <div class="skills__group reveal">
-            <h3 class="skills__label">Software Development</h3>
-            <ul class="tags" aria-label="Software Development skills">
-              <li>Python</li>
-              <li>Flask</li>
-              <li>Django</li>
-              <li>pandas</li>
-              <li>REST APIs</li>
-              <li>SQLite / PostgreSQL</li>
-              <li>pytest</li>
-            </ul>
-          </div>
-
-          <div class="skills__group reveal">
-            <h3 class="skills__label">Languages</h3>
-            <ul class="lang-list" aria-label="Languages">
-              <li>
-                <span class="lang-list__name">German</span>
-                <span class="lang-list__level">Native</span>
-              </li>
-              <li>
-                <span class="lang-list__name">Croatian / Serbian</span>
-                <span class="lang-list__level">Native</span>
-              </li>
-              <li>
-                <span class="lang-list__name">English</span>
-                <span class="lang-list__level">Fluent · C1</span>
-              </li>
-              <li>
-                <span class="lang-list__name">French</span>
-                <span class="lang-list__level">Basic</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================= AWARDS ============================= -->
-      <section class="section" id="awards" aria-labelledby="awards-title">
-        <div class="section__head reveal">
-          <span class="section__index">06</span>
-          <h2 class="section__title" id="awards-title">Certifications &amp; Awards</h2>
-        </div>
-
-        <div class="cards cards--two">
-          <article class="card card--award reveal">
-            <h3 class="card__title">Cambridge English — C1 Advanced (CAE)</h3>
-            <p class="card__subtitle">Cambridge University Press &amp; Assessment · English, C1</p>
-            <span class="card__period">Jul 2023</span>
-          </article>
-          <article class="card card--award reveal">
-            <h3 class="card__title">State Sports Award Baden-Württemberg (Landessportpreis)</h3>
-            <p class="card__subtitle">
-              Landessportverband Baden-Württemberg &amp; Ministry of Education, Youth and Sports Baden-Württemberg
+        <div class="container">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="eyebrow mono">05 / skills</p>
+              <h2 class="section__title" id="skills-title">Skills</h2>
+            </div>
+            <p class="section__intro">
+              Core skills only — each one used in the work shown on this page.
             </p>
-            <p>Awarded for the maximum score of 15/15 in the theoretical and practical Abitur
-              examination in physical education — one of 133 recipients statewide.</p>
-            <span class="card__period">Jul 2024</span>
-          </article>
+          </header>
+
+          <!-- Skill matrix: area · core skills · where it is shown -->
+          <dl class="matrix">
+            <div class="matrix__row">
+              <dt class="matrix__area">Business analysis</dt>
+              <dd class="matrix__skills">Requirements engineering · Stakeholder management · Master data management</dd>
+              <dd class="matrix__proof mono" translate="no"><a href="#apicon">ApiCon</a> · <a href="#st-brazil">deliverable tracker</a></dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">Data &amp; analytics</dt>
+              <dd class="matrix__skills" translate="no">SQL · Power BI (DAX, data modelling) · Excel (simulation models, Power Query)</dd>
+              <dd class="matrix__proof mono" translate="no"><a href="#st-market">~19,800 listings</a> · <a href="#st-digital">~33,000 contracts</a></dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">Development</dt>
+              <dd class="matrix__skills" translate="no">Python (Flask, pandas) · Django · PostgreSQL / SQLite · REST APIs</dd>
+              <dd class="matrix__proof mono" translate="no"><a href="#apicon">ApiCon</a> · <a href="#rental">rental platform</a></dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">AI-assisted development</dt>
+              <dd class="matrix__skills" translate="no">Claude Code · OpenAI Codex · GitHub Copilot · Microsoft 365 Copilot</dd>
+              <dd class="matrix__proof mono" translate="no"><a href="#projects">both projects</a> · <a href="#st-market">AI workshop</a></dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">Languages</dt>
+              <dd class="matrix__skills">German, Croatian/Serbian (native) · English (C1) · French, Portuguese (basic)</dd>
+              <dd class="matrix__proof mono" translate="no"><a href="#other">Cambridge C1</a></dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <!-- ============================= BEYOND WORK ============================= -->
-      <section class="section" id="beyond" aria-labelledby="beyond-title">
-        <div class="section__head reveal">
-          <span class="section__index">07</span>
-          <h2 class="section__title" id="beyond-title">Beyond Work</h2>
-        </div>
-
-        <div class="cards">
-          <article class="card reveal">
-            <h3 class="card__title">Competitive Basketball</h3>
-            <ul class="card__points">
-              <li>U19 German National Basketball League (NBBL, highest youth division)</li>
-              <li>Team Captain (U18 division)</li>
-              <li>University Representative Team, Mahidol University International College</li>
-            </ul>
-          </article>
+      <!-- ============================= AWARDS & ACTIVITIES ============================= -->
+      <section class="section" id="other" aria-labelledby="other-title">
+        <div class="container">
+          <header class="section__head section__head--row">
+            <div>
+              <p class="eyebrow mono">06 / awards &amp; activities</p>
+              <h2 class="section__title" id="other-title">Beyond the desk</h2>
+            </div>
+          </header>
+          <dl class="matrix matrix--plain">
+            <div class="matrix__row">
+              <dt class="matrix__area">State Sports Award</dt>
+              <dd class="matrix__skills">Landessportpreis Baden-Württemberg — maximum score of 15/15 in the Abitur physical education exam; one of 133 recipients statewide.</dd>
+              <dd class="matrix__proof mono">Jul 2024</dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">Competitive basketball</dt>
+              <dd class="matrix__skills">U19 German National Basketball League (NBBL, highest youth division) · U18 team captain · University team, MUIC Bangkok · Youth coach (U12)</dd>
+            </div>
+            <div class="matrix__row">
+              <dt class="matrix__area">Cambridge English C1</dt>
+              <dd class="matrix__skills">C1 Advanced (CAE) — Cambridge University Press &amp; Assessment</dd>
+              <dd class="matrix__proof mono">Jul 2023</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <!-- ============================= CONTACT ============================= -->
-      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact reveal">
-          <span class="section__index">08</span>
-          <h2 class="section__title" id="contact-title">Let’s connect</h2>
-          <p class="contact__lead">
-            I’m looking for entry-level roles in business analysis, data analytics or digital transformation in Southeast Asia from November 2027.
-          </p>
-          <ul class="contact__list">
-            <li>
-              <span class="contact__label">Email</span>
-              <a href="mailto:azdajicleon@gmail.com">azdajicleon@gmail.com</a>
-            </li>
-            <li>
-              <span class="contact__label">LinkedIn</span>
-              <a href="https://www.linkedin.com/in/leon-azdajic/" target="_blank" rel="noopener noreferrer">View profile ↗</a>
-            </li>
-            <li>
-              <span class="contact__label">Currently</span>
-              <span>São Paulo, Brazil · until Nov 2026</span>
-            </li>
-            <li>
-              <span class="contact__label">Relocation</span>
-              <span>Open across Southeast Asia</span>
-            </li>
-          </ul>
+      <!-- ============================= CONTACT (ink band) ============================= -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__inner container">
+          <div class="contact__text">
+            <p class="eyebrow mono">07 / contact</p>
+            <h2 class="contact__title" id="contact-title">Let’s talk.</h2>
+            <p class="contact__lead">
+              I’m open to international entry-level roles in business analysis, data analytics or
+              digital transformation from November 2027.
+            </p>
+            <div class="contact__actions">
+              <a class="btn btn--light" href="mailto:azdajicleon@gmail.com">Write an email</a>
+              <a class="btn btn--line" href="/cv/leon-azdajic-cv.pdf" download data-cv>Download CV <span class="btn__note">PDF</span></a>
+              <a class="contact__link" href="https://www.linkedin.com/in/leon-azdajic/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </div>
+          <dl class="spec" aria-label="Contact details">
+            <div class="spec__head mono" translate="no"><span>contact</span><span>open to roles</span></div>
+            <div class="spec__row"><dt class="mono" translate="no">email</dt><dd><a href="mailto:azdajicleon@gmail.com">azdajicleon@gmail.com</a></dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">linkedin</dt><dd><a href="https://www.linkedin.com/in/leon-azdajic/" target="_blank" rel="noopener noreferrer">in/leon-azdajic ↗</a></dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">based in</dt><dd>Stuttgart, Germany</dd></div>
+            <div class="spec__row"><dt class="mono" translate="no">available</dt><dd>From November 2027</dd></div>
+          </dl>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__inner">
-        <p class="footer__copy">© <span id="year"></span> Leon Azdajic · Updated September 2026</p>
+      <div class="footer__inner container">
+        <p class="footer__copy mono">© <span id="year"></span> Leon Azdajic · updated Nov 2026</p>
         <nav class="footer__legal" aria-label="Legal">
           <button type="button" class="footer__legal-link" data-modal-open="modal-impressum">
             Impressum
@@ -1064,7 +944,7 @@
               übermittelt. Dies können insbesondere sein:
             </p>
             <ul class="legal-list">
-              <li>anonymisierte bzw. gekürzte IP-Adresse</li>
+              <li>IP-Adresse</li>
               <li>Datum und Uhrzeit des Zugriffs</li>
               <li>aufgerufene Datei / URL</li>
               <li>verwendeter Browser und Betriebssystem</li>
@@ -1093,6 +973,12 @@
               Diese Website setzt keine Cookies, verwendet keine Web-Analyse (z. B. Google
               Analytics), kein Tracking und keine Einbindung externer Inhalte (z. B. Karten,
               Videos, Social-Media-Plugins). Daher ist kein Cookie-Banner erforderlich.
+            </p>
+            <p>
+              Die interaktive Demo läuft vollständig in Ihrem Browser und arbeitet nur mit
+              Beispieldaten; dabei werden keine Daten an mich oder Dritte übertragen.
+              Links zu externen Seiten (z. B. LinkedIn) werden erst beim Anklicken aufgerufen;
+              ab dann gilt die Datenschutzerklärung des jeweiligen Anbieters.
             </p>
           </section>
 
@@ -1127,7 +1013,7 @@
             </p>
           </section>
 
-          <p class="modal__meta">Stand: Juni 2026</p>
+          <p class="modal__meta">Stand: November 2026</p>
         </div>
       </div>
     </dialog>

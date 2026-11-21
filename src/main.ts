@@ -3,22 +3,23 @@
  */
 
 // Self-hosted fonts (Fontsource) — no external Google Fonts request, GDPR-friendly.
-// Variable fonts: one file per family covering all weights we use.
 import "@fontsource-variable/inter";
-import "@fontsource-variable/space-grotesk";
+import "@fontsource-variable/jetbrains-mono";
 
 import "./styles/main.scss";
 
 import { initNav } from "./modules/nav";
-import { initReveal } from "./modules/animations";
-import { initBackground } from "./modules/background";
+import { initProgress } from "./modules/progress";
+import { initStations } from "./modules/stations";
+import { initDemo } from "./modules/demo";
 import { initModals } from "./modules/modals";
 import { initSlider } from "./modules/slider";
 
 const start = () => {
   initNav();
-  initReveal();
-  initBackground();
+  initProgress();
+  initStations();
+  initDemo();
   initModals();
   initSlider();
 

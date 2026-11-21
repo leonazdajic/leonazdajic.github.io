@@ -22,6 +22,7 @@ export function initNav(): void {
 
   // --- Mobile menu toggle ---
   if (toggle && links) {
+    const isOpen = () => links.classList.contains("is-open");
     const closeMenu = () => {
       links.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
@@ -30,8 +31,18 @@ export function initNav(): void {
       const open = links.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(open));
     });
-    // Close after navigating on mobile
-    navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+    // Close after navigating on mobile (section links and the CV download)
+    links.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    // Esc closes and hands focus back to the toggle
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" || !isOpen()) return;
+      closeMenu();
+      toggle.focus();
+    });
+    // A click outside the bar closes the menu
+    document.addEventListener("click", (e) => {
+      if (isOpen() && !nav.contains(e.target as Node)) closeMenu();
+    });
   }
 
   // --- Scroll-spy ---

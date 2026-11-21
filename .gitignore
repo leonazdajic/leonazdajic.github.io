@@ -11,3 +11,8 @@ dist/
 leon_cv_data.md
 Leon_Azdajic_CV*.docx
 Leon_Azdajic_CV*.pdf
+
+# Project theses (PA) – never commit
+PA_*.pdf
+PA *.pdf
+*Projektarbeit*.pdf

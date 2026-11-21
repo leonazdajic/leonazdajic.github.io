@@ -3,16 +3,17 @@
 A high-end, single-page online CV. Static, fast-loading and deployment-agnostic
 — it builds to a plain `dist/` folder that runs on any static host.
 
-**Design:** dark anthracite theme with a Mercedes-inspired neon petrol-cyan
-accent (`#00D7D2`), thin geometric lines, a subtle animated grid background,
-quiet reveal-on-scroll motion, and a strong typographic hierarchy
-(Space Grotesk + Inter). Fully responsive and mobile-first, with accessibility
+**Design:** "Engineered" — a light reading surface framed by dark ink bands
+(hero, contact), Inter for text and JetBrains Mono for metadata (both
+self-hosted), window-framed project visuals, a journey timeline, collapsible
+experience stations and an interactive ApiCon demo with sample data. A print
+stylesheet makes the page print as a CV. Fully responsive, with accessibility
 in mind (semantic HTML, skip link, keyboard focus, reduced-motion support).
 
 ## Tech stack
 
 - **Vite** — build tool & dev server (fast, zero-config static output)
-- **TypeScript** — small, typed behaviour modules (nav, scroll reveal, background)
+- **TypeScript** — small, typed behaviour modules (nav, progress, stations, demo, slider, modals)
 - **SCSS** — component-scoped styles with shared design tokens
 - No UI framework and no runtime dependencies → tiny payload (~3.6 kB CSS +
   1.6 kB JS gzipped).
@@ -54,7 +55,8 @@ Deploy the `dist/` folder to any static host:
 ## Editing content
 
 All CV content lives directly in `index.html` as semantic markup (sections for
-Profile, Experience, Education, Skills, Awards, Beyond Work, Contact). Update the
+Selected work, Profile, Experience, Projects, Education, Skills, Awards &
+Activities, Contact). Update the
 text there; styling and behaviour adjust automatically.
 
 ## Project structure
@@ -67,12 +69,15 @@ leon-cv/
 │   ├── main.ts             # Entry: imports styles, boots modules
 │   ├── modules/
 │   │   ├── nav.ts          # Sticky nav, scroll-spy, mobile menu
-│   │   ├── animations.ts   # Reveal-on-scroll (IntersectionObserver)
-│   │   └── background.ts   # Subtle animated grid background (canvas)
+│   │   ├── progress.ts     # Reading-progress hairline
+│   │   ├── stations.ts     # Collapsible experience stations
+│   │   ├── demo.ts         # Interactive ApiCon demo (sample data)
+│   │   ├── slider.ts       # Screenshot slider (rental case study)
+│   │   └── modals.ts       # Impressum / Datenschutz dialogs
 │   └── styles/
 │       ├── main.scss       # Imports all partials
 │       ├── _variables.scss # Design tokens (colors, fonts, breakpoints)
-│       └── _*.scss         # One partial per section/component
+│       └── _*.scss         # Partials per area (+ _print.scss)
 ├── vite.config.ts
 ├── tsconfig.json
 └── package.json

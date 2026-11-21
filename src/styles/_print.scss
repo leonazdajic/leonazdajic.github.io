@@ -1,0 +1,173 @@
+// ============================================================
+//  Print — the page prints (or saves as PDF) like a CV.
+//  Stations are opened before printing (src/modules/stations.ts).
+// ============================================================
+
+@use "variables" as *;
+
+@media print {
+  @page {
+    margin: 16mm 14mm;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 10pt;
+  }
+
+  .nav,
+  .skip-link,
+  .hero__grid,
+  .hero__actions,
+  #work,
+  .work,
+  .journey,
+  .demo,
+  .slider,
+  .contact__actions,
+  .footer__legal,
+  .inline-link,
+  .station__more-toggle,
+  .skillset,
+  .subhead,
+  .case__visual,
+  .case__foot,
+  .hero .spec,
+  .hero__proof {
+    display: none !important;
+  }
+
+  .hero,
+  .contact,
+  .footer {
+    background: #fff !important;
+    color: #000;
+  }
+
+  .hero__name,
+  .hero__role,
+  .contact__title,
+  .contact__lead,
+  .hero__figure,
+  .hero__proof-list,
+  .spec dd strong {
+    color: #000 !important;
+  }
+
+  .hero__figures li,
+  .hero__proof {
+    border-color: #ccc;
+  }
+
+  .spec {
+    background: #fff;
+    border-color: #ccc;
+
+    dd,
+    a {
+      color: #000;
+    }
+  }
+
+  .container {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .hero,
+  .section,
+  .contact {
+    padding-block: 5mm 0;
+    margin-top: 0;
+  }
+
+  .section__title {
+    font-size: 13pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // Keep small units whole; let long cards flow so pages don't end half empty
+  .station,
+  .matrix__row,
+  .case__figures,
+  .case__story > div,
+  .edu__courses,
+  .contact__inner {
+    break-inside: avoid;
+  }
+
+  .eyebrow,
+  .section__title,
+  .section__head,
+  .case__head,
+  .case__context,
+  .card__label,
+  .case__label {
+    break-after: avoid;
+  }
+
+  .section + .section > .container::before {
+    margin-bottom: 4mm;
+  }
+
+  .case__figures li {
+    background: #fff;
+  }
+
+  // Compact layout: one column of text, tight rhythm (~3 A4 pages)
+  .section__head {
+    margin-bottom: 3mm;
+  }
+
+  .section__head--row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1mm;
+
+    .section__intro {
+      justify-self: start;
+      max-width: none;
+    }
+  }
+
+  .section__intro,
+  .case__lead {
+    font-size: 9.5pt;
+  }
+
+  .case,
+  .case__body {
+    display: block;
+  }
+
+  .case + .case {
+    margin-top: 5mm;
+  }
+
+  .station {
+    padding-block: 2.5mm;
+  }
+
+  .card {
+    padding: 4mm;
+    border-color: #ccc;
+  }
+
+  .matrix__row {
+    padding-block: 1.5mm;
+  }
+
+  .hero__figures {
+    margin-top: 4mm;
+  }
+
+  .hero__photo {
+    width: 25mm;
+    height: 25mm;
+    border-color: #ccc;
+  }
+}

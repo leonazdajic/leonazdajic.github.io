@@ -1,39 +1,63 @@
 // ============================================================
-//  Design tokens — Mercedes-inspired dark / neon-petrol theme
+//  Design tokens — "Engineered": light reading surface,
+//  dark ink bands (hero, contact), mono details
 // ============================================================
 
-// --- Colors ---
-$bg-primary: #0a0a0f; // deep anthracite / near-black
-$bg-secondary: #101018; // raised surfaces (cards)
-$bg-elevated: #15151f; // hover / elevated surfaces
+// --- Light surface ---
+$bg: #fafaf7; // warm off-white page
+$surface: #ffffff; // cards, frames, tables
+$surface-sunken: #f4f4f0; // image wells
+$surface-bar: #f1f1ec; // window bars, table heads
 
-$accent: #00d7d2; // neon petrol-cyan (Mercedes-style)
-$accent-soft: #4fe6e2;
-$accent-deep: #00a8a4;
-$accent-glow: rgba(0, 215, 210, 0.16);
-$accent-line: rgba(0, 215, 210, 0.4);
+$text: #14171c; // headings, emphasis
+$text-body: #363c45; // running text
+$muted: #5d6672; // dates, places, meta (AA on $bg)
 
-$text-primary: #f1f2f5;
-$text-secondary: #9aa0ad;
-$text-muted: #5f6571;
+$border: #e3e3dd; // hairlines
+$border-strong: #cdcdc5; // controls, hover
 
-$border: rgba(255, 255, 255, 0.07);
-$border-strong: rgba(255, 255, 255, 0.13);
+$accent: #0f5c6b; // dark petrol — links, focus, highlights
+$accent-hover: #0a4552;
+$accent-line: rgba(15, 92, 107, 0.35); // link underlines
+
+// --- Ink bands ---
+$ink: #0d1321;
+$ink-2: #141c2e; // raised surfaces on ink
+$ink-line: rgba(255, 255, 255, 0.09);
+$ink-text: #eef1f5;
+$ink-muted: #9aa5b8;
+$ink-accent: #7cc6d2; // petrol, lifted for contrast on ink
+
+// --- Status colours (demo only) ---
+$sev-critical: #b42318;
+$sev-critical-bg: #fef3f2;
+$sev-warning: #a15c07;
+$sev-warning-bg: #fffaeb;
+$sev-cosmetic: #5d6672;
+$sev-cosmetic-bg: #f2f2ee;
+$ok: #1a7f4b;
 
 // --- Typography ---
-// Self-hosted via Fontsource (imported in main.ts). "… Variable" is the family
-// name the Fontsource variable packages register; system fonts as fallback.
-$font-display: "Space Grotesk Variable", system-ui, sans-serif;
-$font-body: "Inter Variable", system-ui, -apple-system, sans-serif;
+// Self-hosted via Fontsource (imported in main.ts); system fonts as fallback.
+$font: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+$mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
 
 // --- Layout ---
-$max-width: 1080px;
-$hero-max-width: 1420px;
-$nav-height: 72px;
+$max-width: 1200px;
+$aside-width: 12rem; // station grid: dates / places column
+$section-space: clamp(3.5rem, 7vw, 5.5rem); // vertical rhythm between sections
+$gutter: clamp(2rem, 4.5vw, 4.5rem); // between layout columns
+$nav-height: 64px;
+$sticky-top: calc(#{$nav-height} + 2rem); // sticky column offset
+$radius: 6px;
+$radius-lg: 10px;
+$shadow-frame:
+  0 1px 2px rgba(20, 23, 28, 0.04),
+  0 12px 32px -12px rgba(20, 23, 28, 0.16);
 
 // --- Motion ---
-$ease: cubic-bezier(0.22, 1, 0.36, 1);
-$transition: 0.4s $ease;
+$transition: 150ms ease;
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 // --- Breakpoints ---
 $bp-mobile: 600px;

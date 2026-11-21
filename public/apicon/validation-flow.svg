@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="t d">
+  <title id="t">How ApiCon works</title>
+  <desc id="d">Four steps: Excel reference data is uploaded, live product API values are fetched for 25 European markets, values are compared field by field and deviations classified by business impact, and an Excel review report with run history is produced.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#0F5C6B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="640" height="400" fill="#F4F4F0"/>
+  <g font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- 1 -->
+    <rect x="48" y="48" width="240" height="128" rx="6" fill="#FFFFFF" stroke="#D9D9D2"/>
+    <text x="72" y="82" font-size="14" font-weight="600" fill="#0F5C6B">01</text>
+    <text x="72" y="112" font-size="21" font-weight="600" fill="#14171C">Reference data</text>
+    <text x="72" y="136" font-size="15" fill="#5D6672">Excel master data</text>
+    <text x="72" y="155" font-size="15" fill="#5D6672">as single source of truth</text>
+    <!-- 2 -->
+    <rect x="352" y="48" width="240" height="128" rx="6" fill="#FFFFFF" stroke="#D9D9D2"/>
+    <text x="376" y="82" font-size="14" font-weight="600" fill="#0F5C6B">02</text>
+    <text x="376" y="112" font-size="21" font-weight="600" fill="#14171C">Product API</text>
+    <text x="376" y="136" font-size="15" fill="#5D6672">Live values for</text>
+    <text x="376" y="155" font-size="15" fill="#5D6672">25 European markets</text>
+    <!-- 3 -->
+    <rect x="352" y="224" width="240" height="128" rx="6" fill="#FFFFFF" stroke="#D9D9D2"/>
+    <text x="376" y="258" font-size="14" font-weight="600" fill="#0F5C6B">03</text>
+    <text x="376" y="288" font-size="21" font-weight="600" fill="#14171C">Field comparison</text>
+    <text x="376" y="312" font-size="15" fill="#5D6672">Deviations classified</text>
+    <text x="376" y="331" font-size="15" fill="#5D6672">by business impact</text>
+    <!-- 4 -->
+    <rect x="48" y="224" width="240" height="128" rx="6" fill="#FFFFFF" stroke="#0F5C6B" stroke-width="1.5"/>
+    <text x="72" y="258" font-size="14" font-weight="600" fill="#0F5C6B">04</text>
+    <text x="72" y="288" font-size="21" font-weight="600" fill="#14171C">Review report</text>
+    <text x="72" y="312" font-size="15" fill="#5D6672">Excel report with</text>
+    <text x="72" y="331" font-size="15" fill="#5D6672">run history and deltas</text>
+  </g>
+  <g fill="none" stroke="#0F5C6B" stroke-width="1.6" stroke-linecap="round">
+    <line x1="298" y1="112" x2="342" y2="112" marker-end="url(#arrow)"/>
+    <line x1="472" y1="186" x2="472" y2="214" marker-end="url(#arrow)"/>
+    <line x1="342" y1="288" x2="298" y2="288" marker-end="url(#arrow)"/>
+  </g>
+</svg>
